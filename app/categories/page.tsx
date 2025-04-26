@@ -18,7 +18,8 @@ export default function Home() {
                     borderRadius: '15px',
                     padding: '20px',
                     width: '250px',
-                    textAlign: 'center'
+                    textAlign: 'center',
+                    marginRight: 100
                 }}>
                     <h2>Analysis</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -57,7 +58,7 @@ export default function Home() {
             </div>
 
             {/* Coming Soon */}
-            <h2 style={{ textAlign: 'center', marginBottom: '40px' }}>More Coming Soon...</h2>
+            <h2 style={{ textAlign: 'center', marginBottom: '40px', marginTop: '50px' }}>More Coming Soon...</h2>
         </main>
     );
 }
