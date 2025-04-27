@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function HowItWorks() {
   return (
@@ -17,7 +16,7 @@ export default function HowItWorks() {
             </div>
             <h3 className="text-xl font-bold mb-4">Choose Your Path</h3>
             <p className="text-gray-300">
-              Select between Generative or Analytical AI based on your needs. Each path offers specialized models for different tasks.
+              Select between the different categories of AI, based on your needs. Each path offers specialized models for different tasks.
             </p>
           </div>
 
@@ -69,64 +68,14 @@ export default function HowItWorks() {
         </div>
 
         <div className="bg-gray-800/50 rounded-xl p-8">
-          <h2 className="text-3xl font-bold mb-8 text-center">Getting Started</h2>
-          <div className="max-w-4xl mx-auto space-y-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-gray-900/50 rounded-lg p-6">
-                <h3 className="text-xl font-bold mb-4 text-purple-400">1. Installation</h3>
-                <div className="bg-black/30 p-4 rounded-lg font-mono text-sm mb-4">
-                  {`npm install pandoras-box-ai`}
-                </div>
-                <p className="text-gray-300">
-                  Install our package using npm, yarn, or your preferred package manager.
-                </p>
-              </div>
-              
-              <div className="bg-gray-900/50 rounded-lg p-6">
-                <h3 className="text-xl font-bold mb-4 text-purple-400">2. API Key Setup</h3>
-                <div className="bg-black/30 p-4 rounded-lg font-mono text-sm mb-4">
-                  {`PANDORAS_BOX_API_KEY=your_api_key`}
-                </div>
-                <p className="text-gray-300">
-                  Set up your API key in your environment variables for secure access.
-                </p>
-              </div>
+          <h2 className="text-3xl font-bold mb-6 text-center">Getting Started</h2>
+          <div className="max-w-3xl mx-auto">
+            <div className="bg-gray-900/50 p-4 rounded-lg font-mono text-sm mb-4">
+              {`npm install pandoras-box-ai`}
             </div>
-
-            <div className="bg-gray-900/50 rounded-lg p-6">
-              <h3 className="text-xl font-bold mb-4 text-purple-400">3. Quick Start Example</h3>
-              <div className="bg-black/30 p-4 rounded-lg font-mono text-sm mb-4">
-                {`import { PandorasBox } from 'pandoras-box-ai';
-
-const ai = new PandorasBox({
-  apiKey: process.env.PANDORAS_BOX_API_KEY
-});
-
-// Example: Using GPT-4 for text generation
-const response = await ai.generate.text({
-  model: 'gpt-4',
-  prompt: 'Write a creative story about...'
-});`}
-              </div>
-              <p className="text-gray-300">
-                Start using our models with just a few lines of code. Check out our documentation for more examples.
-              </p>
-            </div>
-
-            <div className="flex justify-center gap-4">
-              <Link 
-                href="/learn"
-                className="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg hover:from-purple-500 hover:to-pink-500 transition-colors"
-              >
-                View Documentation
-              </Link>
-              <Link 
-                href="/models"
-                className="px-6 py-3 bg-gray-900/50 rounded-lg hover:bg-gray-900/70 transition-colors"
-              >
-                Explore Models
-              </Link>
-            </div>
+            <p className="text-center text-gray-300">
+              Check out our comprehensive documentation to start building with AI that actually works.
+            </p>
           </div>
         </div>
       </div>
