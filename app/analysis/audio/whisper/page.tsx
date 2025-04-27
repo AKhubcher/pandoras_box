@@ -44,10 +44,10 @@ export default function GPT4Page() {
                             <h2 className="text-2xl font-bold mb-4">Introduction</h2>
                             <div className="space-y-4 text-gray-300">
                                 <p>
-                                    GPT-4 is OpenAI's most advanced language model, capable of understanding and generating human-like text with remarkable accuracy and nuance. It represents a significant leap forward in natural language processing technology.
+                                    Whisper is an automatic speech recognition (ASR) system developed by OpenAI that is designed to transcribe and translate spoken language with remarkable accuracy across multiple languages. Trained on a massive and diverse dataset of 680,000 hours of multilingual and multitask supervised data collected from the web, Whisper demonstrates robust performance across various audio conditions, accents, technical language, and background noise scenarios that often challenge other speech recognition systems.
                                 </p>
                                 <p>
-                                    With its enhanced capabilities, GPT-4 can handle complex tasks such as detailed analysis, creative writing, coding, and even understanding context and nuance in ways that previous models couldn't match.
+                                    What distinguishes Whisper is its versatility and accessibility as an open-source model. It can perform multilingual speech recognition, speech translation, and language identification in a single system without requiring separate components for each task. Whisper has proven particularly effective at understanding non-English languages and heavily accented speech, areas where many other ASR systems struggle. Its architecture employs a Transformer-based encoder-decoder design that has been optimized to handle the complexities of converting diverse audio inputs into accurate text outputs, making it valuable for applications ranging from content transcription and accessibility tools to language learning platforms.RetryClaude can make mistakes. Please double-check responses.
                                 </p>
                             </div>
                         </div>

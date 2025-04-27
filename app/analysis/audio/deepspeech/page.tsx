@@ -44,10 +44,10 @@ export default function GPT4Page() {
                             <h2 className="text-2xl font-bold mb-4">Introduction</h2>
                             <div className="space-y-4 text-gray-300">
                                 <p>
-                                    GPT-4 is OpenAI's most advanced language model, capable of understanding and generating human-like text with remarkable accuracy and nuance. It represents a significant leap forward in natural language processing technology.
+                                    DeepSpeech is an open-source speech recognition system developed by Mozilla that uses deep learning techniques to convert spoken language into text. Built on research published by Baidu's Silicon Valley AI Lab, it implements an end-to-end neural network architecture that takes audio as input and directly outputs text transcriptions without relying on traditional speech recognition components like pronunciation dictionaries or language models as separate modules.
                                 </p>
                                 <p>
-                                    With its enhanced capabilities, GPT-4 can handle complex tasks such as detailed analysis, creative writing, coding, and even understanding context and nuance in ways that previous models couldn't match.
+                                    What makes DeepSpeech particularly significant is its accessibility and flexibility as an open-source platform. The system was designed to run efficiently on various devices, from powerful servers to consumer hardware, making speech recognition technology more widely available to developers and users. DeepSpeech supports multiple languages and has been continuously improved through community contributions, focusing on accuracy, speed, and reduced model size to enable practical applications ranging from voice assistants and transcription services to accessibility tools for people with hearing impairments.RetryClaude can make mistakes. Please double-check responses.
                                 </p>
                             </div>
                         </div>
