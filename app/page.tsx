@@ -12,7 +12,7 @@ export default function Home() {
             Open Pandora's Box.
           </h1>
           <p className="text-xl sm:text-2xl text-gray-300 max-w-3xl mx-auto">
-            Get access to all AI models and their API's for free and learn how to use them.
+            Get access to all AI models and their APIs for free and learn how to use them.
           </p>
         </div>
       </section>
