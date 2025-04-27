@@ -46,19 +46,19 @@ export default function RootLayout({
                 </Link>
               </div>
               <div className="flex space-x-6">
-                <Link href="/models" className="p-1 content-center border-5 rounded-full border-solid border-indigo-950  hover:border-purple-400 hover:text-purple-100 transition-colors active:bg-gray-700">
+                <Link href="/models" className="border-b-4 rounded-t-lg p-1 content-center border-indigo-950  hover:border-purple-400 hover:text-purple-100 transition-colors active:bg-gray-700">
                   All Models
                 </Link>
-                <Link href="/how-it-works" className="p-1 content-center border-5 rounded-full border-solid border-indigo-950  hover:border-purple-400 hover:text-purple-100 transition-colors active:bg-gray-700">
+                <Link href="/how-it-works" className="border-b-4 rounded-t-lg p-1 content-center border-indigo-950  hover:border-purple-400 hover:text-purple-100 transition-colors active:bg-gray-700">
                   How It Works
                 </Link>
-                <Link href="/about" className="p-1 content-center border-5 rounded-full border-solid border-indigo-950  hover:border-purple-400 hover:text-purple-100 transition-colors active:bg-gray-700">
+                <Link href="/about" className="border-b-4 rounded-t-lg p-1 content-center border-indigo-950  hover:border-purple-400 hover:text-purple-100 transition-colors active:bg-gray-700">
                   About
                 </Link>
-                <Link href="/learn" className="p-1 content-center border-5 rounded-full border-solid border-indigo-950  hover:border-purple-400 hover:text-purple-100 transition-colors active:bg-gray-700">
+                <Link href="/learn" className="border-b-4 rounded-t-lg p-1 content-center border-indigo-950  hover:border-purple-400 hover:text-purple-100 transition-colors active:bg-gray-700">
                   Learn
                 </Link>
-                <Link href="/profile" className="p-1 content-center border-5 rounded-full border-solid border-indigo-950  hover:border-purple-400 hover:text-purple-100 transition-colors active:bg-gray-700">
+                <Link href="/profile" className="border-b-4 rounded-t-lg p-1 content-center border-indigo-950  hover:border-purple-400 hover:text-purple-100 transition-colors active:bg-gray-700">
                   Profile
                 </Link>
               </div>
