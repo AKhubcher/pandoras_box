@@ -66,13 +66,10 @@ export default function LearnPage() {
               </p>
               <Link
                 href=""
-                className="inline-block px-6 py-3 bg-purple-600/50 rounded-lg hover:bg-purple-600/70 transition-colors"
+                className="inline-block px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg hover:from-purple-500 hover:to-pink-500 transition-colors"
               >
                 Start Learning →
               </Link>
-            </div>
-            <div className="w-32 h-32 bg-purple-600/30 rounded-full flex items-center justify-center">
-              <div className="w-24 h-24 bg-purple-600/30 rounded-full" />
             </div>
           </div>
         </div>
