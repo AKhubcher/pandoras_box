@@ -1,10 +1,5 @@
 export default function Home() {
     return (
-<<<<<<< HEAD
-        <p>hi!</p>
-    )
-};
-=======
         <main>
             <h1 style={{ textAlign: 'center', marginTop: '20px', fontSize: 70, color: '#5A9BD4', fontWeight: 50 }}>All Models</h1>
 
@@ -69,4 +64,4 @@ export default function Home() {
         </main>
     );
 }
->>>>>>> frontend-2
+
