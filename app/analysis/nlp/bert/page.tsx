@@ -44,10 +44,10 @@ export default function BertPage() {
                             <h2 className="text-2xl font-bold mb-4">Introduction</h2>
                             <div className="space-y-4 text-gray-300">
                                 <p>
-                                    GPT-4 is OpenAI's most advanced language model, capable of understanding and generating human-like text with remarkable accuracy and nuance. It represents a significant leap forward in natural language processing technology.
+                                    BERT (Bidirectional Encoder Representations from Transformers) is a natural language processing model developed by Google in 2018 that revolutionized how machines understand human language. Unlike its predecessors that processed text in a single direction, BERT analyzes text bidirectionally by examining the context of words in relation to all other words in a sentence, rather than just looking at words that come before or after sequentially. This bidirectional approach allows BERT to develop a deeper understanding of language context and nuance, significantly improving performance on tasks like question answering and sentiment analysis.
                                 </p>
                                 <p>
-                                    With its enhanced capabilities, GPT-4 can handle complex tasks such as detailed analysis, creative writing, coding, and even understanding context and nuance in ways that previous models couldn't match.
+                                    BERT's key innovation is its pre-training method, where it learns to predict randomly masked words in a sentence and understand relationships between sentences. After this general language understanding is established, BERT can be fine-tuned with additional training data for specific tasks such as classification, named entity recognition, or question answering, often achieving state-of-the-art results with relatively little task-specific data. This adaptability has made BERT a fundamental building block in modern NLP applications, from search engines to virtual assistants, and has influenced numerous subsequent language models.RetryClaude can make mistakes. Please double-check responses.
                                 </p>
                             </div>
                         </div>
