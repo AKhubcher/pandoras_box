@@ -1,23 +1,17 @@
 import Link from "next/link";
 
-const imageModels = [
+const textModels = [
     {
-        name: "Deep AI",
-        description: "Generates all kinds of content, from text, images, and videos, to music- all in one place.",
-        capabilities: ["Text generation", "Easy-to-use", "Video Generation", "All in One"],
-        path: "/geni"
+        name: "Llama",
+        description: "A series of open foundational language models developed by Meta (Facebook), optimized for high performance with relatively smaller training datasets.",
+        capabilities: ["Focused on efficiency with smaller datasets", "Lightweight compared to other larger models", "Intended for Academic and Research Communities", "Open-Weight Models", "Available for various sizes", "Multilingual capabilities"],
+        path: "/generation/text/llama"
     },
     {
-        name: "DALLE-E",
-        description: "Text-to-image models developed by OpenAI using deep learning methodologies",
-        capabilities: ["Text-to-Image Models", "Digital Image Generations", "Audio and Speech Development", "Text Generation"],
-        path: "https://platform.openai.com/docs/quickstart?api-mode=responses"
-    },
-    {
-        name: "",
-        description: "Text-to-Text Transfer Transformer for various NLP tasks",
-        capabilities: ["Text summarization", "Translation", "Question answering", "Text classification"],
-        path: "/models/t5"
+        name: "Bart",
+        description: "A Facebook AI model that combines the strengths of BERT (understanding) and GPT (generation) for tasks like text summarization and translation.",
+        capabilities: ["Combines bidirectional (BERT) and autoregressive (GPT) approaches", "Strong in text generation, summarization, translation", "Pre-trained on corrupted text reconstruction tasks", "Performs well in low-resource settings", "Good for both understanding and generation tasks"],
+        path: "/generation/text/bart"
     }
 ];
 
@@ -31,13 +25,13 @@ export default function NLPPage() {
                     </Link>
                 </div>
 
-                <h1 className="text-4xl font-bold mb-4">Natural Language Processing</h1>
+                <h1 className="text-4xl font-bold mb-4">Text Generation</h1>
                 <p className="text-xl text-gray-400 mb-8">
                     Explore our collection of NLP models that help machines understand, interpret, and generate human language.
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {imageModels.map((model) => (
+                    {textModels.map((model) => (
                         <div key={model.name} className="bg-gray-800/50 rounded-xl p-6 hover:bg-gray-800/70 transition-colors">
                             <h3 className="text-2xl font-bold mb-4">{model.name}</h3>
                             <p className="text-gray-400 mb-4">{model.description}</p>
