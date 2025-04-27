@@ -31,10 +31,10 @@ export default function GPT4Page() {
                                 <span className="text-purple-400">Keywords:</span> Generative, Multimodal, Large-language-model
                             </div>
                             <div className="bg-purple-900/30 px-4 py-2 rounded-lg">
-                                <span className="text-purple-400">Installation:</span> <a href="https://platform.openai.com/docs/quickstart?api-mode=responses" style={{ textDecoration: "underline", color: '#3D90D7' }}>Docs</a>
+                                <span className="text-purple-400">Installation:</span> <a href="https://platform.openai.com/docs/quickstart?api-mode=responses" style={{ textDecoration: "underline", color: '#3D90D7' }}>OA API</a>
                             </div>
                             <div className="text-green-400 bg-purple-900/30 px-4 py-2 rounded-lg">
-                                38 keys available
+                                borrow
                             </div>
                         </div>
                     </div>

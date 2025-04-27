@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const allModels = [
   {
@@ -7,56 +8,64 @@ const allModels = [
     description: "Bidirectional and Auto-Regressive Transformer for sequence-to-sequence tasks",
     category: "Natural Language Processing",
     path: "/generation/text/bart",
-    bgColor: "from-blue-900/50 to-indigo-900/50"
+    bgColor: "from-blue-900/50 to-indigo-900/50",
+    logo: "/hflogo.png"
   },
   {
     name: "BERT",
     description: "Bidirectional language understanding and analysis for advanced text comprehension",
     category: "Natural Language Processing",
     path: "/analysis/nlp/bert",
-    bgColor: "from-blue-900/50 to-indigo-900/50"
+    bgColor: "from-blue-900/50 to-indigo-900/50",
+    logo: "/google-logo-on-transparent-white-background-free-vector.jpg"
   },
   {
     name: "DALL-E",
     description: "Create and edit stunning images from natural language descriptions",
     category: "Image Generation",
     path: "/generation/image/dalle",
-    bgColor: "from-purple-900/50 to-pink-900/50"
+    bgColor: "from-purple-900/50 to-pink-900/50",
+    logo: "/oalogo.png"
   },
   {
     name: "DeepAI",
     description: "Multi-purpose AI model for various creative and analytical tasks",
     category: "Multi-Modal",
     path: "/generation/image/deepai",
-    bgColor: "from-purple-900/50 to-pink-900/50"
+    bgColor: "from-purple-900/50 to-pink-900/50",
+    logo: "/da.png"
   },
   {
     name: "DeepSpeech",
     description: "Advanced speech recognition model for accurate audio transcription",
     category: "Speech Recognition",
     path: "/analysis/audio/deepspeech",
-    bgColor: "from-blue-900/50 to-indigo-900/50"
+    bgColor: "from-blue-900/50 to-indigo-900/50",
+    logo: "/R.png"
   },
   {
     name: "GPT-4",
     description: "State-of-the-art language model for text generation and understanding",
     category: "Text Generation",
     path: "/analysis/nlp/gpt4",
-    bgColor: "from-purple-900/50 to-pink-900/50"
+    bgColor: "from-purple-900/50 to-pink-900/50",
+    logo: "/oalogo.png"
   },
   {
     name: "Llama",
     description: "Open-source large language model for versatile text generation",
     category: "Text Generation",
     path: "/generation/text/llama",
-    bgColor: "from-purple-900/50 to-pink-900/50"
+    bgColor: "from-purple-900/50 to-pink-900/50",
+    logo: "/meta-symbol-1536x864.png"
   },
   {
     name: "Whisper",
     description: "Robust speech recognition model for multiple languages and tasks",
     category: "Speech Recognition",
     path: "/analysis/audio/whisper",
-    bgColor: "from-blue-900/50 to-indigo-900/50"
+    bgColor: "from-blue-900/50 to-indigo-900/50",
+    logo: "/oalogo.png"
   }
 ].sort((a, b) => a.name.localeCompare(b.name));
 
@@ -77,8 +86,14 @@ export default function ModelsPage() {
             >
               <div className={`bg-gradient-to-r ${model.bgColor} rounded-xl p-6 h-full hover:scale-105 transition-transform duration-300`}>
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-full bg-gray-800/50 flex items-center justify-center">
-                    <div className="w-8 h-8 rounded-full bg-gray-700/50" />
+                  <div className="w-12 h-12 rounded-full bg-gray-800/50 flex items-center justify-center overflow-hidden">
+                    <Image
+                      src={model.logo}
+                      alt={`${model.name} logo`}
+                      width={32}
+                      height={32}
+                      className="object-contain"
+                    />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold">{model.name}</h3>

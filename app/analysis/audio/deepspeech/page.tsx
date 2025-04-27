@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function GPT4Page() {
+export default function DeepSpeechPage() {
     return (
         <div className="min-h-screen py-16 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
@@ -45,10 +45,16 @@ export default function GPT4Page() {
                             <h2 className="text-2xl font-bold mb-4">Introduction</h2>
                             <div className="space-y-4 text-gray-300">
                                 <p>
-                                    DeepSpeech is an open-source speech recognition system developed by Mozilla that uses deep learning techniques to convert spoken language into text. Built on research published by Baidu's Silicon Valley AI Lab, it implements an end-to-end neural network architecture that takes audio as input and directly outputs text transcriptions without relying on traditional speech recognition components like pronunciation dictionaries or language models as separate modules.
+                                    DeepSpeech is an open-source speech recognition system developed by Mozilla that:
                                 </p>
+                                <ul className="list-disc pl-5 space-y-2">
+                                    <li>Converts spoken language into text using deep learning techniques</li>
+                                    <li>Implements an end-to-end neural network architecture</li>
+                                    <li>Processes audio directly to text without intermediate components</li>
+                                    <li>Runs efficiently on various devices from servers to consumer hardware</li>
+                                </ul>
                                 <p>
-                                    What makes DeepSpeech particularly significant is its accessibility and flexibility as an open-source platform. The system was designed to run efficiently on various devices, from powerful servers to consumer hardware, making speech recognition technology more widely available to developers and users. DeepSpeech supports multiple languages and has been continuously improved through community contributions, focusing on accuracy, speed, and reduced model size to enable practical applications ranging from voice assistants and transcription services to accessibility tools for people with hearing impairments.RetryClaude can make mistakes. Please double-check responses.
+                                    Built on research published by Baidu's Silicon Valley AI Lab, DeepSpeech has been continuously improved through community contributions, focusing on accuracy, speed, and reduced model size for practical applications.
                                 </p>
                             </div>
                         </div>
@@ -57,39 +63,57 @@ export default function GPT4Page() {
                             <h2 className="text-2xl font-bold mb-4">Instructions</h2>
                             <div className="space-y-3">
                                 <div className="bg-purple-900/30 p-4 rounded-lg">
-                                    1. Choose your interaction method (API or interface)
+                                    <h3 className="font-bold">1. Installation Options</h3>
                                 </div>
-                                <div className="bg-gray-900/50 p-4 rounded-lg font-mono text-sm">
-                                    {`import OpenAI from 'openai';
+                                <div className="bg-gray-900/50 p-4 rounded-lg text-sm">
+                                    <ul className="space-y-2">
+                                        <li><strong>Python Package:</strong> Install via pip</li>
+                                        <li><strong>Pre-built Binaries:</strong> Available for multiple platforms</li>
+                                        <li><strong>Docker:</strong> Containerized deployment</li>
+                                    </ul>
+                                    <div className="mt-3 font-mono text-xs bg-gray-800 p-3 rounded">
+                                        {`# Python installation
+pip install deepspeech
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+# Download pre-trained English model
+curl -LO https://github.com/mozilla/DeepSpeech/releases/download/v0.9.3/deepspeech-0.9.3-models.pbmm
+curl -LO https://github.com/mozilla/DeepSpeech/releases/download/v0.9.3/deepspeech-0.9.3-models.scorer`}
+                                    </div>
+                                </div>
 
-async function generateText(prompt: string) {
-  const completion = await openai.chat.completions.create({
-    model: "gpt-4",
-    messages: [{ role: "user", content: prompt }],
-    temperature: 0.7,
-  });
+                                <div className="bg-purple-900/30 p-4 rounded-lg">
+                                    <h3 className="font-bold">2. Basic Usage</h3>
+                                </div>
+                                <div className="bg-gray-900/50 p-4 rounded-lg text-sm">
+                                    <ul className="space-y-2">
+                                        <li>Load the pre-trained model</li>
+                                        <li>Prepare audio in supported format (16kHz, 16-bit mono)</li>
+                                        <li>Process audio through the model</li>
+                                        <li>Access transcription results</li>
+                                    </ul>
+                                </div>
 
-  return completion.choices[0].message.content;
-}`}
-                                </div>
                                 <div className="bg-purple-900/30 p-4 rounded-lg">
-                                    2. Provide clear, well-structured prompts
+                                    <h3 className="font-bold">3. Model Configuration</h3>
                                 </div>
-                                <div className="bg-purple-900/30 p-4 rounded-lg">
-                                    3. Set appropriate temperature and parameters
+                                <div className="bg-gray-900/50 p-4 rounded-lg text-sm">
+                                    <ul className="space-y-2">
+                                        <li><strong>Beam width:</strong> Controls accuracy vs. performance trade-off</li>
+                                        <li><strong>Language model:</strong> Optional scorer for improved accuracy</li>
+                                        <li><strong>Advanced parameters:</strong> Fine-tune for specific use cases</li>
+                                    </ul>
                                 </div>
+
                                 <div className="bg-purple-900/30 p-4 rounded-lg">
-                                    4. Review and refine the generated output
+                                    <h3 className="font-bold">4. Custom Training</h3>
                                 </div>
-                                <div className="bg-purple-900/30 p-4 rounded-lg">
-                                    5. Iterate based on results
-                                </div>
-                                <div className="bg-purple-900/30 p-4 rounded-lg">
-                                    6. Implement safety measures and content filtering
+                                <div className="bg-gray-900/50 p-4 rounded-lg text-sm">
+                                    <ul className="space-y-2">
+                                        <li>Prepare training data with transcriptions</li>
+                                        <li>Set up training environment</li>
+                                        <li>Run training process with appropriate parameters</li>
+                                        <li>Evaluate and optimize model performance</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -98,20 +122,36 @@ async function generateText(prompt: string) {
                             <h2 className="text-2xl font-bold mb-4">Capabilities</h2>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div className="bg-purple-900/30 p-4 rounded-lg">
-                                    <h3 className="font-bold mb-2">Natural Language Understanding</h3>
-                                    <p className="text-gray-300">Advanced comprehension of context, nuance, and complex language patterns</p>
+                                    <h3 className="font-bold mb-2">Core Features</h3>
+                                    <ul className="text-gray-300 space-y-1">
+                                        <li>• End-to-end speech recognition</li>
+                                        <li>• Language identification</li>
+                                        <li>• Streaming transcription</li>
+                                    </ul>
                                 </div>
                                 <div className="bg-purple-900/30 p-4 rounded-lg">
-                                    <h3 className="font-bold mb-2">Code Generation</h3>
-                                    <p className="text-gray-300">Ability to write, review, and explain code across multiple programming languages</p>
+                                    <h3 className="font-bold mb-2">Technical Aspects</h3>
+                                    <ul className="text-gray-300 space-y-1">
+                                        <li>• Cross-platform support</li>
+                                        <li>• TensorFlow-based architecture</li>
+                                        <li>• CPU & GPU acceleration</li>
+                                    </ul>
                                 </div>
                                 <div className="bg-purple-900/30 p-4 rounded-lg">
-                                    <h3 className="font-bold mb-2">Creative Writing</h3>
-                                    <p className="text-gray-300">Generation of various creative content formats with consistent style and tone</p>
+                                    <h3 className="font-bold mb-2">Integration Options</h3>
+                                    <ul className="text-gray-300 space-y-1">
+                                        <li>• C, Python, JavaScript APIs</li>
+                                        <li>• Command-line interface</li>
+                                        <li>• Microservice deployment</li>
+                                    </ul>
                                 </div>
                                 <div className="bg-purple-900/30 p-4 rounded-lg">
-                                    <h3 className="font-bold mb-2">Analysis & Reasoning</h3>
-                                    <p className="text-gray-300">Complex problem-solving and detailed analytical capabilities</p>
+                                    <h3 className="font-bold mb-2">Practical Applications</h3>
+                                    <ul className="text-gray-300 space-y-1">
+                                        <li>• Transcription services</li>
+                                        <li>• Voice assistants</li>
+                                        <li>• Accessibility tools</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -120,16 +160,43 @@ async function generateText(prompt: string) {
                             <h2 className="text-2xl font-bold mb-4">Examples</h2>
                             <div className="space-y-4">
                                 <div className="bg-gray-900/50 p-4 rounded-lg font-mono text-sm">
-                                    {`// Example: Creative writing prompt
-const response = await generateText(
-  "Write a short story about a robot learning to paint"
-);`}
+                                    {`// Basic Python usage
+import deepspeech
+import numpy as np
+import wave
+
+# Load pre-trained model
+model = deepspeech.Model('deepspeech-0.9.3-models.pbmm')
+model.enableExternalScorer('deepspeech-0.9.3-models.scorer')
+
+# Process audio file
+def transcribe_file(audio_file):
+    w = wave.open(audio_file, 'r')
+    frames = w.readframes(w.getnframes())
+    buffer = np.frombuffer(frames, np.int16)
+    text = model.stt(buffer)
+    return text
+
+result = transcribe_file('audio.wav')`}
                                 </div>
                                 <div className="bg-gray-900/50 p-4 rounded-lg font-mono text-sm">
-                                    {`// Example: Code generation
-const response = await generateText(
-  "Write a React component for a todo list"
-);`}
+                                    {`// Stream processing example
+import deepspeech
+import numpy as np
+
+model = deepspeech.Model('deepspeech-0.9.3-models.pbmm')
+model.enableExternalScorer('deepspeech-0.9.3-models.scorer')
+
+# Create streaming session
+stream = model.createStream()
+
+# Process audio in chunks (e.g., from microphone)
+def process_audio_chunk(audio_chunk):
+    buffer = np.frombuffer(audio_chunk, np.int16)
+    stream.feedAudioContent(buffer)
+    
+# Get final result when done
+text = stream.finishStream()`}
                                 </div>
                             </div>
                         </div>
@@ -150,11 +217,11 @@ const response = await generateText(
                         <div className="bg-gray-800/50 rounded-xl p-6">
                             <h3 className="text-xl font-bold mb-4">Key Features</h3>
                             <ul className="space-y-2 text-gray-300">
-                                <li>• Advanced language understanding</li>
-                                <li>• Multi-modal capabilities</li>
-                                <li>• Improved reasoning</li>
-                                <li>• Enhanced creativity</li>
-                                <li>• Better context retention</li>
+                                <li>• <strong>Open Source</strong>: Community-driven development</li>
+                                <li>• <strong>Cross-platform</strong>: Works on many devices</li>
+                                <li>• <strong>Lightweight</strong>: Optimized for performance</li>
+                                <li>• <strong>Multilingual</strong>: Support for various languages</li>
+                                <li>• <strong>Customizable</strong>: Train with domain-specific data</li>
                             </ul>
                         </div>
                     </div>
@@ -162,4 +229,4 @@ const response = await generateText(
             </div>
         </div>
     );
-} 
+}
