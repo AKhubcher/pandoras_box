@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Analytics } from "@vercel/analytics/react";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import Header from "./components/Header";
 import FloatingSearchIcon from "./components/FloatingSearchIcon";
 import Image from "next/image";
@@ -36,6 +37,7 @@ export default function RootLayout({
         </main>
         <FloatingSearchIcon />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
