@@ -49,15 +49,18 @@ export default function RootLayout({
                 <Link href="/learn" className="hover:text-purple-400 transition-colors">
                   Learn
                 </Link>
+                <Link href="/profile" className="hover:text-purple-400 transition-colors">
+                  Profile
+                </Link>
               </div>
             </div>
           </div>
         </nav>
-        
+
         <main className="pt-20">
           {children}
         </main>
-        
+
         <FloatingSearchIcon />
         <Analytics />
       </body>
