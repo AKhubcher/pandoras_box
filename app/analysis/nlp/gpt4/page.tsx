@@ -133,7 +133,7 @@ const response = await generateText(
 
           {/* Sidebar */}
           <div className="space-y-6">
-            <div className="bg-gray-800/50 rounded-xl p-6 sticky top-4">
+            <div className="bg-gray-800/50 rounded-xl p-6 static top-4">
               <h3 className="text-xl font-bold mb-4">Table of Contents</h3>
               <nav className="space-y-2">
                 <a href="#introduction" className="block text-gray-300 hover:text-white hover:bg-purple-900/30 px-3 py-2 rounded-lg transition-colors">Introduction</a>

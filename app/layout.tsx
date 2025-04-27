@@ -36,7 +36,10 @@ export default function RootLayout({
                   Pandora's Box
                 </Link>
               </div>
-              <div className="flex space-x-4">
+              <div className="flex space-x-6">
+                <Link href="/models" className="hover:text-purple-400 transition-colors">
+                  All Models
+                </Link>
                 <Link href="/how-it-works" className="hover:text-purple-400 transition-colors">
                   How It Works
                 </Link>
