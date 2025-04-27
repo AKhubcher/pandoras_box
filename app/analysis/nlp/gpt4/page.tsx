@@ -18,16 +18,16 @@ export default function GPT4Page() {
                         <div className="w-16 h-16 bg-purple-600/50 rounded-full" />
                     </div>
                     <div className="flex-1">
-                        <h1 className="text-4xl font-bold mb-2">DALL-E</h1>
+                        <h1 className="text-4xl font-bold mb-2">GPT-4</h1>
                         <div className="flex flex-wrap gap-4">
                             <div className="bg-purple-900/30 px-4 py-2 rounded-lg">
-                                <span className="text-purple-400">Model Name:</span> DALL-E 3
+                                <span className="text-purple-400">Model Name:</span> GPT-4
                             </div>
                             <div className="bg-purple-900/30 px-4 py-2 rounded-lg">
-                                <span className="text-purple-400">Docs:</span> <a href="https://platform.openai.com/docs/guides/images" style={{ textDecoration: "underline", color: '#3D90D7' }}>OpenAI</a>
+                                <span className="text-purple-400">Docs:</span> <a href="https://platform.openai.com/docs/models/gpt-4" style={{ textDecoration: "underline", color: '#3D90D7' }}>OpenAI</a>
                             </div>
                             <div className="bg-purple-900/30 px-4 py-2 rounded-lg">
-                                <span className="text-purple-400">Keywords:</span> Image-generation, Text-to-image, AI-art
+                                <span className="text-purple-400">Keywords:</span> Large language model, Text generation, Reasoning
                             </div>
                             <div className="bg-purple-900/30 px-4 py-2 rounded-lg">
                                 <span className="text-purple-400">Installation:</span> <a href="https://platform.openai.com/docs/quickstart" style={{ textDecoration: "underline", color: '#3D90D7' }}>OpenAI API</a>
@@ -44,16 +44,10 @@ export default function GPT4Page() {
                             <h2 className="text-2xl font-bold mb-4">Introduction</h2>
                             <div className="space-y-4 text-gray-300">
                                 <p>
-                                    DALL-E is OpenAI's breakthrough text-to-image generation system that:
+                                    GPT-4 is OpenAI's most advanced large language model, demonstrating human-level performance on various professional and academic benchmarks. As a multimodal model, GPT-4 can accept both image and text inputs and produce text outputs, allowing for sophisticated understanding and generation across multiple content types.
                                 </p>
-                                <ul className="list-disc pl-5 space-y-2">
-                                    <li>Creates high-quality images from text descriptions</li>
-                                    <li>Understands complex prompts with multiple objects and attributes</li>
-                                    <li>Generates images in various styles (photorealistic, art, etc.)</li>
-                                    <li>Supports image editing and variations of existing images</li>
-                                </ul>
                                 <p>
-                                    DALL-E 3 offers significant improvements in prompt understanding, image quality, and text rendering within images compared to previous versions.
+                                    Compared to its predecessors, GPT-4 exhibits enhanced capabilities in reasoning, world knowledge, creative content generation, and instruction following. It excels at understanding context and nuance in complex tasks, making it suitable for applications ranging from content creation and summarization to code generation and problem-solving across domains.
                                 </p>
                             </div>
                         </div>
@@ -62,63 +56,39 @@ export default function GPT4Page() {
                             <h2 className="text-2xl font-bold mb-4">Instructions</h2>
                             <div className="space-y-3">
                                 <div className="bg-purple-900/30 p-4 rounded-lg">
-                                    <h3 className="font-bold">1. Choose Interaction Method</h3>
+                                    1. Choose your interaction method (API or interface)
                                 </div>
-                                <div className="bg-gray-900/50 p-4 rounded-lg text-sm">
-                                    <ul className="space-y-2">
-                                        <li><strong>API:</strong> Use OpenAI's Images API endpoint</li>
-                                        <li><strong>Web Interface:</strong> ChatGPT Plus with DALL-E integration</li>
-                                        <li><strong>Python SDK:</strong> Official OpenAI package</li>
-                                    </ul>
-                                    <div className="mt-3 font-mono text-xs bg-gray-800 p-3 rounded">
-                                        {`import OpenAI from 'openai';
+                                <div className="bg-gray-900/50 p-4 rounded-lg font-mono text-sm">
+                                    {`import OpenAI from 'openai';
 
-const openai = new OpenAI(process.env.OPENAI_API_KEY);
+const openai = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY,
+});
 
-const response = await openai.images.generate({
-  model: "dall-e-3",
-  prompt: "A cat astronaut in space",
-  size: "1024x1024",
-  quality: "standard",
-  n: 1,
-});`}
-                                    </div>
+async function generateText(prompt: string) {
+  const completion = await openai.chat.completions.create({
+    model: "gpt-4",
+    messages: [{ role: "user", content: prompt }],
+    temperature: 0.7,
+  });
+
+  return completion.choices[0].message.content;
+}`}
                                 </div>
-
                                 <div className="bg-purple-900/30 p-4 rounded-lg">
-                                    <h3 className="font-bold">2. Craft Effective Prompts</h3>
+                                    2. Provide clear, well-structured prompts
                                 </div>
-                                <div className="bg-gray-900/50 p-4 rounded-lg text-sm">
-                                    <ul className="space-y-2">
-                                        <li>Be specific: "A watercolor painting of a sunset over mountains"</li>
-                                        <li>Include style: "Digital art", "Oil painting", "Pixel art"</li>
-                                        <li>Specify composition: "Centered", "Background focus"</li>
-                                        <li>Use DALL-E 3's enhanced prompt understanding</li>
-                                    </ul>
-                                </div>
-
                                 <div className="bg-purple-900/30 p-4 rounded-lg">
-                                    <h3 className="font-bold">3. Key Parameters</h3>
+                                    3. Set appropriate temperature and parameters
                                 </div>
-                                <div className="bg-gray-900/50 p-4 rounded-lg text-sm">
-                                    <ul className="space-y-2">
-                                        <li><strong>size:</strong> 1024x1024, 1024x1792, or 1792x1024</li>
-                                        <li><strong>quality:</strong> "standard" (faster) or "hd" (higher detail)</li>
-                                        <li><strong>style:</strong> "vivid" (more dramatic) or "natural"</li>
-                                        <li><strong>n:</strong> Number of images (1 for DALL-E 3)</li>
-                                    </ul>
-                                </div>
-
                                 <div className="bg-purple-900/30 p-4 rounded-lg">
-                                    <h3 className="font-bold">4. Refinement & Safety</h3>
+                                    4. Review and refine the generated output
                                 </div>
-                                <div className="bg-gray-900/50 p-4 rounded-lg text-sm">
-                                    <ul className="space-y-2">
-                                        <li>Review images for accuracy and quality</li>
-                                        <li>Iterate with adjusted prompts for better results</li>
-                                        <li>Built-in content filters prevent harmful outputs</li>
-                                        <li>Respect copyright and usage guidelines</li>
-                                    </ul>
+                                <div className="bg-purple-900/30 p-4 rounded-lg">
+                                    5. Iterate based on results
+                                </div>
+                                <div className="bg-purple-900/30 p-4 rounded-lg">
+                                    6. Implement safety measures and content filtering
                                 </div>
                             </div>
                         </div>
@@ -127,36 +97,20 @@ const response = await openai.images.generate({
                             <h2 className="text-2xl font-bold mb-4">Capabilities</h2>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div className="bg-purple-900/30 p-4 rounded-lg">
-                                    <h3 className="font-bold mb-2">Image Generation</h3>
-                                    <ul className="text-gray-300 space-y-1">
-                                        <li>• Photorealistic scenes</li>
-                                        <li>• Artistic styles (painting, sketch, etc.)</li>
-                                        <li>• Conceptual illustrations</li>
-                                    </ul>
+                                    <h3 className="font-bold mb-2">Natural Language Understanding</h3>
+                                    <p className="text-gray-300">Advanced comprehension of context, nuance, and complex language patterns</p>
                                 </div>
                                 <div className="bg-purple-900/30 p-4 rounded-lg">
-                                    <h3 className="font-bold mb-2">Image Editing</h3>
-                                    <ul className="text-gray-300 space-y-1">
-                                        <li>• Outpainting (extend images)</li>
-                                        <li>• Variations of existing images</li>
-                                        <li>• Selective editing with masks</li>
-                                    </ul>
+                                    <h3 className="font-bold mb-2">Code Generation</h3>
+                                    <p className="text-gray-300">Ability to write, review, and explain code across multiple programming languages</p>
                                 </div>
                                 <div className="bg-purple-900/30 p-4 rounded-lg">
-                                    <h3 className="font-bold mb-2">Special Features</h3>
-                                    <ul className="text-gray-300 space-y-1">
-                                        <li>• Text rendering within images</li>
-                                        <li>• Multi-object compositions</li>
-                                        <li>• Perspective control</li>
-                                    </ul>
+                                    <h3 className="font-bold mb-2">Creative Writing</h3>
+                                    <p className="text-gray-300">Generation of various creative content formats with consistent style and tone</p>
                                 </div>
                                 <div className="bg-purple-900/30 p-4 rounded-lg">
-                                    <h3 className="font-bold mb-2">Creative Applications</h3>
-                                    <ul className="text-gray-300 space-y-1">
-                                        <li>• Concept art generation</li>
-                                        <li>• Marketing visuals</li>
-                                        <li>• Educational materials</li>
-                                    </ul>
+                                    <h3 className="font-bold mb-2">Analysis & Reasoning</h3>
+                                    <p className="text-gray-300">Complex problem-solving and detailed analytical capabilities</p>
                                 </div>
                             </div>
                         </div>
@@ -165,20 +119,30 @@ const response = await openai.images.generate({
                             <h2 className="text-2xl font-bold mb-4">Examples</h2>
                             <div className="space-y-4">
                                 <div className="bg-gray-900/50 p-4 rounded-lg font-mono text-sm">
-                                    {`// Basic Image Generation
-const response = await openai.images.generate({
-  prompt: "A cyberpunk cityscape at night with neon lights, rain-soaked streets, and flying cars, digital art style",
-  model: "dall-e-3",
-  size: "1024x1024"
-});`}
+                                    {`// Example: Creative writing prompt
+const response = await generateText(
+  "Write a short story about a robot learning to paint"
+);`}
                                 </div>
                                 <div className="bg-gray-900/50 p-4 rounded-lg font-mono text-sm">
-                                    {`// Style-Specific Prompt
-const response = await openai.images.generate({
-  prompt: "A portrait of a wizard in van gogh style with visible brush strokes",
-  model: "dall-e-3",
-  style: "vivid",
-  quality: "hd"
+                                    {`// Example: Code generation
+const response = await generateText(
+  "Write a React component for a todo list"
+);`}
+                                </div>
+                                <div className="bg-gray-900/50 p-4 rounded-lg font-mono text-sm">
+                                    {`// Example: Multimodal image understanding
+const response = await openai.chat.completions.create({
+  model: "gpt-4-vision-preview",
+  messages: [
+    {
+      role: "user",
+      content: [
+        { type: "text", text: "What's in this image?" },
+        { type: "image_url", image_url: { url: "https://example.com/image.jpg" } }
+      ]
+    }
+  ]
 });`}
                                 </div>
                             </div>
@@ -200,11 +164,12 @@ const response = await openai.images.generate({
                         <div className="bg-gray-800/50 rounded-xl p-6">
                             <h3 className="text-xl font-bold mb-4">Key Features</h3>
                             <ul className="space-y-2 text-gray-300">
-                                <li>• <strong>High-Resolution</strong>: Up to 1792x1024px</li>
-                                <li>• <strong>Prompt Rewriting</strong>: Auto-optimizes your prompts</li>
-                                <li>• <strong>Text Rendering</strong>: Improved text in images</li>
-                                <li>• <strong>Safety Systems</strong>: Built-in content filters</li>
-                                <li>• <strong>Multiple Aspect Ratios</strong>: Square, portrait, landscape</li>
+                                <li>• Advanced language understanding</li>
+                                <li>• Multi-modal capabilities (text + images)</li>
+                                <li>• Improved reasoning</li>
+                                <li>• Enhanced creativity</li>
+                                <li>• Better context retention</li>
+                                <li>• Extensive knowledge base</li>
                             </ul>
                         </div>
                     </div>
