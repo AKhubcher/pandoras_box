@@ -5,13 +5,13 @@ const audioModels = [
         name: "Whisper",
         description: "Whisper is a state-of-the-art model for automatic speech recognition (ASR) and speech translation, proposed in the paper Robust Speech Recognition via Large-Scale Weak Supervision by Alec Radford et al. from OpenAI. Trained on >5M hours of labeled data, Whisper demonstrates a strong ability to generalise to many datasets and domains in a zero-shot setting",
         capabilities: ["Translation", "Transcription", "Timestamping", "Open-Source", "Robust to Noise"],
-        path: "/models/wisper"
+        path: "/analysis/nlp/whisper"
     },
     {
         name: "Deep Speech",
         description: "DeepSpeech is an open source Speech-To-Text engine, using a model trained by machine learning techniques based on Baidu’s Deep Speech research paper. Project DeepSpeech uses Google’s TensorFlow to make the implementation easier.",
         capabilities: ["Speech-To-Text", "Works Offline", "Open-Source", "Customizable and Trainable", "Simple API", "TensorFlow-Based"],
-        path: "/models/deepspeech"
+        path: "/analysis/nlp/deepspeech"
     }
 ];
 
