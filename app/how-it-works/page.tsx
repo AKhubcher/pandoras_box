@@ -8,8 +8,8 @@ export default function HowItWorks() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h1 className="text-4xl sm:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
-            How It Works
-          </h1>
+          How It Works
+        </h1>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             Discover how Pandora's Box revolutionizes AI integration with our intuitive platform
           </p>

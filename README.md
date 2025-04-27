@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Pandora's Box - AI Model Hub
+
+Pandora's Box is a comprehensive AI model hub that provides easy access to various state-of-the-art AI models for different applications. This platform allows users to explore, test, and integrate AI models for text generation, image creation, speech recognition, and more.
+
+## Features
+
+- **Diverse Model Collection**: Access to various AI models including:
+  - Text Generation (GPT-4, Llama, BART)
+  - Image Generation (DALL-E, DeepAI)
+  - Speech Recognition (Whisper, DeepSpeech)
+  - Natural Language Processing (BERT)
+  
+- **User-Friendly Interface**: 
+  - Clean, modern UI with gradient effects
+  - Easy navigation between different models
+  - Responsive design for all devices
+
+## Tech Stack
+
+- **Frontend**:
+  - Next.js 14
+  - TypeScript
+  - Tailwind CSS
+  - React
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- Node.js (v18 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/pandoras-box.git
+cd pandoras-box
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
+
+4. Run the development server:
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Available Models
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Text Generation
+- **GPT-4**: OpenAI's advanced language model
+- **Llama**: Meta's open-source large language model
+- **BART**: Google's bidirectional transformer model
 
-## Learn More
+### Image Generation
+- **DALL-E**: OpenAI's image generation model
+- **DeepAI**: Multi-purpose image generation and processing
 
-To learn more about Next.js, take a look at the following resources:
+### Speech Recognition
+- **Whisper**: OpenAI's speech recognition model
+- **DeepSpeech**: Advanced speech-to-text model
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Natural Language Processing
+- **BERT**: Google's language understanding model
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+
+
+
+
+
+
