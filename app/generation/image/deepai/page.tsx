@@ -93,7 +93,7 @@ export default function GPT4Page() {
                                 </div>
 
                                 <div className="bg-purple-900/30 p-4 rounded-lg">
-                                    <h3 className="font-bold">4-6. Refinement & Safety</h3>
+                                    <h3 className="font-bold">4. Refinement & Safety</h3>
                                 </div>
                                 <div className="bg-gray-900/50 p-4 rounded-lg text-sm">
                                     <ul className="space-y-2">
