@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 
+
 // In-memory storage for demo purposes
 // In a real app, this would be a database
 let searchHistory: { query: string; timestamp: number; tab: string }[] = [];
