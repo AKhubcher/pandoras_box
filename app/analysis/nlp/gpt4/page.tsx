@@ -33,9 +33,11 @@ export default function GPT4Page() {
                             <div className="bg-purple-900/30 px-4 py-2 rounded-lg">
                                 <span className="text-purple-400">Installation:</span> <a href="https://platform.openai.com/docs/quickstart?api-mode=responses" style={{ textDecoration: "underline", color: '#3D90D7' }}>OA API</a>
                             </div>
-                            <div className="text-green-400 bg-purple-900/30 px-4 py-2 rounded-lg">
-                                borrow
-                            </div>
+                            <Link href={"/profile"}>
+                                <div className="text-green-400 bg-purple-900/30 px-4 py-2 rounded-lg">
+                                    borrow
+                                </div>
+                            </Link>
                         </div>
                     </div >
                 </div >

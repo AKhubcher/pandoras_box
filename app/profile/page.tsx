@@ -19,15 +19,15 @@ export default function Profile() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
                     <div className="bg-gray-800/50 rounded-xl p-6 hover:bg-gray-800/70 transition-colors group">
                         <div className="w-12 h-12 bg-purple-900/50 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                            <span className="text-2xl">0</span>
+                            <span className="text-2xl">1</span>
                         </div>
                         <h3 className="text-xl font-bold mb-4 group-hover:text-purple-400 transition-colors">API Keys</h3>
-                        <p className="text-gray-300 mb-4">Manage your API keys and access tokens</p>
-                        <Link 
-                            href="/models" 
+                        <p className="text-gray-300 mb-4 border-box ">OpenAI: sk-abcdefghijklmnopqrstuvwxyz1234567890ABCD</p>
+                        <Link
+                            href="/models"
                             className="inline-block bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-lg hover:opacity-90 transition-opacity"
                         >
-                            Manage Keys
+                            Add Keys
                         </Link>
                     </div>
 
@@ -37,8 +37,8 @@ export default function Profile() {
                         </div>
                         <h3 className="text-xl font-bold mb-4 group-hover:text-purple-400 transition-colors">Enrolled Classes</h3>
                         <p className="text-gray-300 mb-4">Track your learning progress and certifications</p>
-                        <Link 
-                            href="/learn" 
+                        <Link
+                            href="/learn"
                             className="inline-block bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-lg hover:opacity-90 transition-opacity"
                         >
                             View Classes
@@ -51,8 +51,8 @@ export default function Profile() {
                         </div>
                         <h3 className="text-xl font-bold mb-4 group-hover:text-purple-400 transition-colors">Past Models</h3>
                         <p className="text-gray-300 mb-4">View your model usage history and analytics</p>
-                        <Link 
-                            href="/models" 
+                        <Link
+                            href="/models"
                             className="inline-block bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-lg hover:opacity-90 transition-opacity"
                         >
                             View History
@@ -115,7 +115,7 @@ export default function Profile() {
                                     Clear History
                                 </button>
                             </div>
-                            
+
                             <div className="bg-gray-900/50 p-6 rounded-lg group hover:bg-gray-900/70 transition-colors">
                                 <h3 className="text-xl font-bold mb-4 group-hover:text-red-400 transition-colors">Delete Account</h3>
                                 <p className="text-gray-300 mb-4">Permanently delete your account and all associated data</p>
