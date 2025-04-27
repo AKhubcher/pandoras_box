@@ -24,13 +24,13 @@ export default function BertPage() {
                                 <span className="text-purple-400">Model Name:</span> BERT
                             </div>
                             <div className="bg-purple-900/30 px-4 py-2 rounded-lg">
-                                <span className="text-purple-400">Docs:</span> <a href="https://huggingface.co/docs/transformers/en/model_doc/bert">Bert</a>
+                                <span className="text-purple-400">Docs:</span> <a href="https://huggingface.co/docs/transformers/en/model_doc/bert" style={{ textDecoration: "underline", color: '#3D90D7' }}>Bert</a>
                             </div>
                             <div className="bg-purple-900/30 px-4 py-2 rounded-lg">
                                 <span className="text-purple-400">Keywords:</span> Bidirectional, Language-understanding, Transformer-based
                             </div>
                             <div className="bg-purple-900/30 px-4 py-2 rounded-lg">
-                                <span className="text-purple-400">Installation:</span> <a href="https://huggingface.co/docs/transformers/installation">Docs</a>
+                                <span className="text-purple-400">Installation:</span> <a href="https://huggingface.co/docs/transformers/installation" style={{ textDecoration: "underline", color: '#3D90D7' }}>Docs</a>
                             </div>
                         </div>
                     </div>

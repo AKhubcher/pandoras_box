@@ -20,7 +20,7 @@ export default function Home() {
       {/* Categories Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Choose Your AI Path</h2>
+          <h2 className="text-4xl font-bold mb-12 text-center">Browse the categories of AI</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <Link
               href="/generation"

@@ -24,13 +24,13 @@ export default function GPT4Page() {
                                 <span className="text-purple-400">Model Name:</span> DEEP AI
                             </div>
                             <div className="bg-purple-900/30 px-4 py-2 rounded-lg">
-                                <span className="text-purple-400">Docs:</span> <a href="https://deepai.org/docs">DEEP-AI</a>
+                                <span className="text-purple-400">Docs:</span> <a href="https://deepai.org/docs" style={{ textDecoration: "underline", color: '#3D90D7' }}>DEEP-AI</a>
                             </div>
                             <div className="bg-purple-900/30 px-4 py-2 rounded-lg">
                                 <span className="text-purple-400">Keywords:</span> API-platform, Multifunctional, Developer-tools
                             </div>
                             <div className="bg-purple-900/30 px-4 py-2 rounded-lg">
-                                <span className="text-purple-400">Installation:</span> <a href="https://deepai.org/docs#apis">Docs</a>
+                                <span className="text-purple-400">Installation:</span> <a href="https://deepai.org/docs#apis" style={{ textDecoration: "underline", color: '#3D90D7' }}>Docs</a>
                             </div>
                         </div>
                     </div>
