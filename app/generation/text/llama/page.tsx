@@ -18,19 +18,19 @@ export default function GPT4Page() {
                         <div className="w-16 h-16 bg-purple-600/50 rounded-full" />
                     </div>
                     <div className="flex-1">
-                        <h1 className="text-4xl font-bold mb-2">Ilama</h1>
+                        <h1 className="text-4xl font-bold mb-2">Llama</h1>
                         <div className="flex flex-wrap gap-4">
                             <div className="bg-purple-900/30 px-4 py-2 rounded-lg">
-                                <span className="text-purple-400">Model Name:</span> Ilama
+                                <span className="text-purple-400">Model Name:</span> Llama 2/3
                             </div>
                             <div className="bg-purple-900/30 px-4 py-2 rounded-lg">
-                                <span className="text-purple-400">Docs:</span> <a href="https://www.llama.com/docs/model-cards-and-prompt-formats/llama4_omni/" style={{ textDecoration: "underline", color: '#3D90D7' }}>Ilama</a>
+                                <span className="text-purple-400">Docs:</span> <a href="https://ai.meta.com/llama/" style={{ textDecoration: "underline", color: '#3D90D7' }}>Meta AI</a>
                             </div>
                             <div className="bg-purple-900/30 px-4 py-2 rounded-lg">
-                                <span className="text-purple-400">Keywords:</span> Meta-developed, Open-weights, Foundation-model
+                                <span className="text-purple-400">Keywords:</span> Open-weights, Foundation-model, Self-hostable
                             </div>
                             <div className="bg-purple-900/30 px-4 py-2 rounded-lg">
-                                <span className="text-purple-400">Installation:</span> <a href="https://huggingface.co/docs/transformers/en/model_doc/bart" style={{ textDecoration: "underline", color: '#3D90D7' }}>Docs</a>
+                                <span className="text-purple-400">Installation:</span> <a href="https://huggingface.co/docs/transformers/main/model_doc/llama2" style={{ textDecoration: "underline", color: '#3D90D7' }}>HuggingFace</a>
                             </div>
                         </div>
                     </div>
@@ -44,10 +44,16 @@ export default function GPT4Page() {
                             <h2 className="text-2xl font-bold mb-4">Introduction</h2>
                             <div className="space-y-4 text-gray-300">
                                 <p>
-                                    Llama is a series of large language models (LLMs) developed by Meta AI (formerly Facebook AI Research). The Llama models are notable for being released with their weights available to researchers and organizations under specific licenses, making them more accessible than many other comparable LLMs. Beginning with Llama 1 in 2023, followed by Llama 2 and subsequent versions, these models have progressively improved in capabilities, context window size, and performance across various benchmarks.
+                                    Llama is Meta's series of open-weight large language models offering:
                                 </p>
+                                <ul className="list-disc pl-5 space-y-2">
+                                    <li>State-of-the-art performance in its class</li>
+                                    <li>Available in multiple sizes (7B to 70B parameters)</li>
+                                    <li>Commercial-friendly licensing (Llama 2/3)</li>
+                                    <li>Optimized for both research and production use</li>
+                                </ul>
                                 <p>
-                                    What distinguishes Llama in the AI landscape is its position as a leading open-weights alternative to closed proprietary models. The Llama models support multiple languages and can be fine-tuned for specific applications, ranging from coding assistance to content generation and reasoning tasks. They've been designed with both performance and responsible AI development in mind, with Meta publishing extensive documentation about their training methodology, capabilities, and limitations. Llama models have become a popular foundation for many organizations to build their own AI applications and services upon.RetryClaude can make mistakes. Please double-check responses.
+                                    Unlike closed models, Llama provides transparency in weights and architecture while maintaining competitive performance with proprietary alternatives.
                                 </p>
                             </div>
                         </div>
@@ -56,39 +62,67 @@ export default function GPT4Page() {
                             <h2 className="text-2xl font-bold mb-4">Instructions</h2>
                             <div className="space-y-3">
                                 <div className="bg-purple-900/30 p-4 rounded-lg">
-                                    1. Choose your interaction method (API or interface)
+                                    <h3 className="font-bold">1. Deployment Options</h3>
                                 </div>
-                                <div className="bg-gray-900/50 p-4 rounded-lg font-mono text-sm">
-                                    {`import OpenAI from 'openai';
+                                <div className="bg-gray-900/50 p-4 rounded-lg text-sm">
+                                    <ul className="space-y-2">
+                                        <li><strong>Self-hosted:</strong> Run locally via HuggingFace Transformers</li>
+                                        <li><strong>Cloud API:</strong> Use providers like Replicate or Anyscale</li>
+                                        <li><strong>Quantized:</strong> GGUF models for consumer hardware</li>
+                                    </ul>
+                                    <div className="mt-3 font-mono text-xs bg-gray-800 p-3 rounded">
+                                        {`# Using HuggingFace Transformers
+from transformers import AutoTokenizer, AutoModelForCausalLM
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+model = "meta-llama/Llama-2-7b-chat-hf"
+tokenizer = AutoTokenizer.from_pretrained(model)
+llm = AutoModelForCausalLM.from_pretrained(model)
 
-async function generateText(prompt: string) {
-  const completion = await openai.chat.completions.create({
-    model: "gpt-4",
-    messages: [{ role: "user", content: prompt }],
-    temperature: 0.7,
-  });
+inputs = tokenizer("Your prompt here", return_tensors="pt")
+outputs = llm.generate(**inputs)`}
+                                    </div>
+                                </div>
 
-  return completion.choices[0].message.content;
-}`}
-                                </div>
                                 <div className="bg-purple-900/30 p-4 rounded-lg">
-                                    2. Provide clear, well-structured prompts
+                                    <h3 className="font-bold">2. Prompt Engineering</h3>
                                 </div>
-                                <div className="bg-purple-900/30 p-4 rounded-lg">
-                                    3. Set appropriate temperature and parameters
+                                <div className="bg-gray-900/50 p-4 rounded-lg text-sm">
+                                    <ul className="space-y-2">
+                                        <li>Use Llama 2/3's special chat format for best results</li>
+                                        <li>Include system messages for context/behavior</li>
+                                        <li>Example structure:</li>
+                                    </ul>
+                                    <div className="mt-2 font-mono text-xs bg-gray-800 p-3 rounded">
+                                        {`[INST] <<SYS>>
+You are a helpful assistant
+<</SYS>>
+
+User's message here [/INST]`}
+                                    </div>
                                 </div>
+
                                 <div className="bg-purple-900/30 p-4 rounded-lg">
-                                    4. Review and refine the generated output
+                                    <h3 className="font-bold">3. Key Parameters</h3>
                                 </div>
-                                <div className="bg-purple-900/30 p-4 rounded-lg">
-                                    5. Iterate based on results
+                                <div className="bg-gray-900/50 p-4 rounded-lg text-sm">
+                                    <ul className="space-y-2">
+                                        <li><strong>temperature:</strong> 0.1 (precise) to 1.0 (creative)</li>
+                                        <li><strong>max_new_tokens:</strong> Control response length</li>
+                                        <li><strong>top_p:</strong> 0.9 recommended for most cases</li>
+                                        <li><strong>repetition_penalty:</strong> Reduce word repetition</li>
+                                    </ul>
                                 </div>
+
                                 <div className="bg-purple-900/30 p-4 rounded-lg">
-                                    6. Implement safety measures and content filtering
+                                    <h3 className="font-bold">4-6. Optimization</h3>
+                                </div>
+                                <div className="bg-gray-900/50 p-4 rounded-lg text-sm">
+                                    <ul className="space-y-2">
+                                        <li>Fine-tune with LoRA for domain-specific tasks</li>
+                                        <li>Use quantization (4-bit/8-bit) for efficiency</li>
+                                        <li>Implement moderation layers for production</li>
+                                        <li>Monitor performance with eval benchmarks</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -97,20 +131,38 @@ async function generateText(prompt: string) {
                             <h2 className="text-2xl font-bold mb-4">Capabilities</h2>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div className="bg-purple-900/30 p-4 rounded-lg">
-                                    <h3 className="font-bold mb-2">Natural Language Understanding</h3>
-                                    <p className="text-gray-300">Advanced comprehension of context, nuance, and complex language patterns</p>
+                                    <h3 className="font-bold mb-2">Language Tasks</h3>
+                                    <ul className="text-gray-300 space-y-1">
+                                        <li>• Conversational AI (chat models)</li>
+                                        <li>• Text summarization</li>
+                                        <li>• Translation</li>
+                                        <li>• Question answering</li>
+                                    </ul>
                                 </div>
                                 <div className="bg-purple-900/30 p-4 rounded-lg">
                                     <h3 className="font-bold mb-2">Code Generation</h3>
-                                    <p className="text-gray-300">Ability to write, review, and explain code across multiple programming languages</p>
+                                    <ul className="text-gray-300 space-y-1">
+                                        <li>• Code completion</li>
+                                        <li>• Debugging assistance</li>
+                                        <li>• Documentation generation</li>
+                                        <li>• Multiple language support</li>
+                                    </ul>
                                 </div>
                                 <div className="bg-purple-900/30 p-4 rounded-lg">
-                                    <h3 className="font-bold mb-2">Creative Writing</h3>
-                                    <p className="text-gray-300">Generation of various creative content formats with consistent style and tone</p>
+                                    <h3 className="font-bold mb-2">Creative Applications</h3>
+                                    <ul className="text-gray-300 space-y-1">
+                                        <li>• Story writing</li>
+                                        <li>• Content creation</li>
+                                        <li>• Poetry generation</li>
+                                    </ul>
                                 </div>
                                 <div className="bg-purple-900/30 p-4 rounded-lg">
-                                    <h3 className="font-bold mb-2">Analysis & Reasoning</h3>
-                                    <p className="text-gray-300">Complex problem-solving and detailed analytical capabilities</p>
+                                    <h3 className="font-bold mb-2">Reasoning</h3>
+                                    <ul className="text-gray-300 space-y-1">
+                                        <li>• Logical problem solving</li>
+                                        <li>• Mathematical reasoning</li>
+                                        <li>• Decision support</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -119,16 +171,19 @@ async function generateText(prompt: string) {
                             <h2 className="text-2xl font-bold mb-4">Examples</h2>
                             <div className="space-y-4">
                                 <div className="bg-gray-900/50 p-4 rounded-lg font-mono text-sm">
-                                    {`// Example: Creative writing prompt
-const response = await generateText(
-  "Write a short story about a robot learning to paint"
-);`}
+                                    {`# Basic Text Generation
+from transformers import pipeline
+
+llm = pipeline("text-generation", model="meta-llama/Llama-2-7b-chat-hf")
+response = llm("[INST] Explain quantum computing [/INST]")`}
                                 </div>
                                 <div className="bg-gray-900/50 p-4 rounded-lg font-mono text-sm">
-                                    {`// Example: Code generation
-const response = await generateText(
-  "Write a React component for a todo list"
-);`}
+                                    {`# Chat Completion Example
+messages = [
+    {"role": "system", "content": "You are a helpful assistant"},
+    {"role": "user", "content": "What's the capital of France?"}
+]
+response = llm(messages, temperature=0.7)`}
                                 </div>
                             </div>
                         </div>
@@ -149,11 +204,11 @@ const response = await generateText(
                         <div className="bg-gray-800/50 rounded-xl p-6">
                             <h3 className="text-xl font-bold mb-4">Key Features</h3>
                             <ul className="space-y-2 text-gray-300">
-                                <li>• Advanced language understanding</li>
-                                <li>• Multi-modal capabilities</li>
-                                <li>• Improved reasoning</li>
-                                <li>• Enhanced creativity</li>
-                                <li>• Better context retention</li>
+                                <li>• <strong>Open Weights</strong>: Full model access</li>
+                                <li>• <strong>Multiple Sizes</strong>: 7B to 70B parameters</li>
+                                <li>• <strong>Optimized Inference</strong>: Runs on consumer hardware</li>
+                                <li>• <strong>Fine-tuning Support</strong>: Adapt to specific domains</li>
+                                <li>• <strong>Commercial Use</strong>: Llama 2/3 license</li>
                             </ul>
                         </div>
                     </div>
@@ -161,4 +216,4 @@ const response = await generateText(
             </div>
         </div>
     );
-} 
+}
