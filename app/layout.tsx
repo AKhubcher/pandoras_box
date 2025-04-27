@@ -46,19 +46,19 @@ export default function RootLayout({
                 </Link>
               </div>
               <div className="flex space-x-6">
-                <Link href="/models" className="hover:text-purple-400 transition-colors">
+                <Link href="/models" className="p-1 content-center border-5 rounded-full border-solid border-indigo-950  hover:border-purple-400 hover:text-purple-100 transition-colors active:bg-gray-700">
                   All Models
                 </Link>
-                <Link href="/how-it-works" className="hover:text-purple-400 transition-colors">
+                <Link href="/how-it-works" className="p-1 content-center border-5 rounded-full border-solid border-indigo-950  hover:border-purple-400 hover:text-purple-100 transition-colors active:bg-gray-700">
                   How It Works
                 </Link>
-                <Link href="/about" className="hover:text-purple-400 transition-colors">
+                <Link href="/about" className="p-1 content-center border-5 rounded-full border-solid border-indigo-950  hover:border-purple-400 hover:text-purple-100 transition-colors active:bg-gray-700">
                   About
                 </Link>
-                <Link href="/learn" className="hover:text-purple-400 transition-colors">
+                <Link href="/learn" className="p-1 content-center border-5 rounded-full border-solid border-indigo-950  hover:border-purple-400 hover:text-purple-100 transition-colors active:bg-gray-700">
                   Learn
                 </Link>
-                <Link href="/profile" className="hover:text-purple-400 transition-colors">
+                <Link href="/profile" className="p-1 content-center border-5 rounded-full border-solid border-indigo-950  hover:border-purple-400 hover:text-purple-100 transition-colors active:bg-gray-700">
                   Profile
                 </Link>
               </div>
