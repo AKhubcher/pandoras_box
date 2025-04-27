@@ -25,10 +25,10 @@ export default function GPT4Page() {
                                 <span className="text-purple-400">Model Name:</span> GPT-4
                             </div>
                             <div className="bg-purple-900/30 px-4 py-2 rounded-lg">
-                                <span className="text-purple-400">Docs:</span> <a href="https://platform.openai.com/docs" style={{ textDecoration: "underline", color: '#3D90D7' }}>OpenAI</a>
+                                <span className="text-purple-400">Docs:</span> <a href="https://platform.openai.com/docs/models/gpt-4" style={{ textDecoration: "underline", color: '#3D90D7' }}>OpenAI</a>
                             </div>
                             <div className="bg-purple-900/30 px-4 py-2 rounded-lg">
-                                <span className="text-purple-400">Keywords:</span> Generative, Multimodal, Large-language-model
+                                <span className="text-purple-400">Keywords:</span> Large language model, Text generation, Reasoning
                             </div>
                             <div className="bg-purple-900/30 px-4 py-2 rounded-lg">
                                 <span className="text-purple-400">Installation:</span> <a href="https://platform.openai.com/docs/quickstart?api-mode=responses" style={{ textDecoration: "underline", color: '#3D90D7' }}>OA API</a>
@@ -37,21 +37,22 @@ export default function GPT4Page() {
                                 borrow
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </div >
+                </div >
 
                 {/* Content Grid */}
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                < div className="grid grid-cols-1 lg:grid-cols-3 gap-8" >
                     {/* Main Content */}
-                    <div className="lg:col-span-2 space-y-8">
+                    < div className="lg:col-span-2 space-y-8" >
                         <div id="introduction" className="bg-gray-800/50 rounded-xl p-6 scroll-mt-16">
                             <h2 className="text-2xl font-bold mb-4">Introduction</h2>
                             <div className="space-y-4 text-gray-300">
                                 <p>
-                                    GPT-4 is OpenAI's most advanced large language model, representing a significant leap forward in artificial intelligence capabilities. As a multimodal system, it can process and generate content based on both text and images, allowing it to understand visual information alongside textual data. GPT-4 demonstrates remarkable proficiency across diverse domains including creative writing, technical content generation, problem-solving, coding, and nuanced reasoning tasks, while showing substantial improvements in factual accuracy and adherence to instructions compared to its predecessors.
+                                    GPT-4 is OpenAI's most advanced large language model, demonstrating human-level performance on various professional and academic benchmarks. As a multimodal model, GPT-4 can accept both image and text inputs and produce text outputs, allowing for sophisticated understanding and generation across multiple content types.
                                 </p>
                                 <p>
-                                    What sets GPT-4 apart is its sophisticated ability to handle complex, nuanced instructions and generate responses that align with human preferences and intentions. The model exhibits enhanced capabilities in context understanding, logical reasoning, and knowledge application, enabling it to tackle challenging professional and academic benchmarks with unprecedented performance. GPT-4's improved safety guardrails and alignment techniques help reduce harmful outputs while maintaining versatility across languages and use cases, making it suitable for applications ranging from educational assistance and creative collaboration to specialized professional support in fields like programming, healthcare, and legal analysis.RetryClaude can make mistakes. Please double-check responses.                                </p>
+                                    Compared to its predecessors, GPT-4 exhibits enhanced capabilities in reasoning, world knowledge, creative content generation, and instruction following. It excels at understanding context and nuance in complex tasks, making it suitable for applications ranging from content creation and summarization to code generation and problem-solving across domains.
+                                </p>
                             </div>
                         </div>
 
@@ -133,12 +134,27 @@ const response = await generateText(
   "Write a React component for a todo list"
 );`}
                                 </div>
+                                <div className="bg-gray-900/50 p-4 rounded-lg font-mono text-sm">
+                                    {`// Example: Multimodal image understanding
+const response = await openai.chat.completions.create({
+  model: "gpt-4-vision-preview",
+  messages: [
+    {
+      role: "user",
+      content: [
+        { type: "text", text: "What's in this image?" },
+        { type: "image_url", image_url: { url: "https://example.com/image.jpg" } }
+      ]
+    }
+  ]
+});`}
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </div >
 
                     {/* Sidebar */}
-                    <div className="space-y-6">
+                    < div className="space-y-6" >
                         <div className="bg-gray-800/50 rounded-xl p-6 static top-4">
                             <h3 className="text-xl font-bold mb-4">Table of Contents</h3>
                             <nav className="space-y-2">
@@ -153,15 +169,16 @@ const response = await generateText(
                             <h3 className="text-xl font-bold mb-4">Key Features</h3>
                             <ul className="space-y-2 text-gray-300">
                                 <li>• Advanced language understanding</li>
-                                <li>• Multi-modal capabilities</li>
+                                <li>• Multi-modal capabilities (text + images)</li>
                                 <li>• Improved reasoning</li>
                                 <li>• Enhanced creativity</li>
                                 <li>• Better context retention</li>
+                                <li>• Extensive knowledge base</li>
                             </ul>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                    </div >
+                </div >
+            </div >
+        </div >
     );
 } 
