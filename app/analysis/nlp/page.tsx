@@ -5,7 +5,7 @@ const nlpModels = [
     name: "GPT-4",
     description: "Advanced language model for text generation, understanding, and analysis",
     capabilities: ["Text generation", "Language understanding", "Code generation", "Creative writing"],
-    path: "/models/gpt4"
+    path: "/analysis/nlp/gpt4"
   },
   {
     name: "BERT",
@@ -30,7 +30,7 @@ export default function NLPPage() {
             ← Back to Home
           </Link>
         </div>
-        
+
         <h1 className="text-4xl font-bold mb-4">Natural Language Processing</h1>
         <p className="text-xl text-gray-400 mb-8">
           Explore our collection of NLP models that help machines understand, interpret, and generate human language.
