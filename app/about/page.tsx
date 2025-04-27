@@ -9,11 +9,13 @@ export default function About() {
         </h1>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Team Image Placeholder */}
           <div className="relative w-full h-[400px] rounded-2xl overflow-hidden bg-gray-800/50">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <p className="text-gray-400 text-lg">Team Photo Coming Soon</p>
-            </div>
+            <Image
+              src="/IMG_4705.jpg"
+              alt="Team Photo"
+              fill
+              className="object-cover"
+            />
           </div>
           
           {/* Team Description */}
