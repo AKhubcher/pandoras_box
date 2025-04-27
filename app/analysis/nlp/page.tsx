@@ -3,7 +3,7 @@ import Link from "next/link";
 const nlpModels = [
   {
     name: "GPT-4",
-    description: "Advanced language model for text generation, understanding, and analysis",
+    description: "Generative Pre-trained Transformer 4 (GPT-4) is a multimodal large language model trained and created by OpenAI and the fourth in its series of GPT foundation models. It was launched on March 14, 2023, and made publicly available via the paid chatbot product ChatGPT Plus, via OpenAI's API, and via the free chatbot Microsoft Copilot. As a transformer-based model, GPT-4 uses a paradigm where pre-training using both public data and 'data licensed from third- party providers' is used to predict the next token. After this step, the model was then fine-tuned with reinforcement learning feedback from humans and AI for human alignment and policy compliance",
     capabilities: ["Text generation", "Language understanding", "Code generation", "Creative writing"],
     path: "/analysis/nlp/gpt4"
   },
