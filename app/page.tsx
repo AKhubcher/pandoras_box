@@ -9,10 +9,10 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-r from-purple-900/50 to-pink-900/50 z-0" />
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl sm:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
-            Other AI Libraries Suck.
+            Open Pandora's Box.
           </h1>
           <p className="text-xl sm:text-2xl text-gray-300 max-w-3xl mx-auto">
-            We're here to fix it. Welcome to Pandora's Box - where AI actually works.
+            Get access to all AI models and their API's for free and learn how to use them.
           </p>
         </div>
       </section>
@@ -53,11 +53,12 @@ export default function Home() {
             <Link href={"/analysis/nlp/gpt4"}>
               <div className="bg-gray-800/50 rounded-xl p-6 hover:bg-gray-800/70 transition-colors">
                 <Image
-                  width={192}
-                  height={350}
+                  width={100}
+                  height={100}
                   src="/oalogo.png"
                   alt="OpenAI Logo"
                   className="object-cover"
+                  style={{ paddingBottom: "20px" }}
                 />
                 <h3 className="text-xl font-bold mb-2">GPT-4</h3>
                 <p className="text-gray-400">Open AI's most advanced input output multi tool AI model</p>
@@ -66,11 +67,13 @@ export default function Home() {
             <Link href={"/generation/text/bart"}>
               <div className="bg-gray-800/50 rounded-xl p-6 hover:bg-gray-800/70 transition-colors">
                 <Image
-                  width={192}
-                  height={350}
+                  width={110}
+                  height={110}
                   src="/hflogo.png"
                   alt="Hugging Face Logo"
                   className="object-cover"
+                  style={{ paddingBottom: "20px" }}
+
                 />
                 <h3 className="text-xl font-bold mb-2">BART</h3>
                 <p className="text-gray-400">Text generation tool for detailed text analysis, creative writing, and coding</p>
@@ -79,11 +82,12 @@ export default function Home() {
             <Link href={"/generation/image/deepai"}>
               <div className="bg-gray-800/50 rounded-xl p-6 hover:bg-gray-800/70 transition-colors">
                 <Image
-                  width={192}
-                  height={350}
+                  width={120}
+                  height={120}
                   src="/da.png"
                   alt="DeepAI Logo"
                   className="object-cover"
+                  style={{ paddingBottom: "20px" }}
                 />
                 <h3 className="text-xl font-bold mb-2">DeepAI</h3>
                 <p className="text-gray-400">Multi purpose generative AI tool for creative functions</p>
