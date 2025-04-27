@@ -44,10 +44,10 @@ export default function GPT4Page() {
                             <h2 className="text-2xl font-bold mb-4">Introduction</h2>
                             <div className="space-y-4 text-gray-300">
                                 <p>
-                                    GPT-4 is OpenAI's most advanced language model, capable of understanding and generating human-like text with remarkable accuracy and nuance. It represents a significant leap forward in natural language processing technology.
+                                    DeepAI is a research company and platform focused on making artificial intelligence technology accessible to everyone. They offer a comprehensive suite of AI tools and APIs that developers, businesses, and researchers can integrate into their applications, covering a wide range of capabilities including text generation, image processing, content moderation, and various other AI functionalities.
                                 </p>
                                 <p>
-                                    With its enhanced capabilities, GPT-4 can handle complex tasks such as detailed analysis, creative writing, coding, and even understanding context and nuance in ways that previous models couldn't match.
+                                    Beyond providing ready-to-use AI tools, DeepAI maintains a commitment to advancing AI research and education. They host an open-access scientific journal for AI research publications and offer educational resources to help people understand AI technologies. This combination of practical tools and knowledge-sharing positions DeepAI as both a service provider and a contributor to the broader AI ecosystem, with the aim of democratizing access to artificial intelligence capabilities.RetryClaude can make mistakes. Please double-check responses.
                                 </p>
                             </div>
                         </div>
