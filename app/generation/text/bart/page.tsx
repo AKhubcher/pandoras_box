@@ -7,8 +7,8 @@ export default function BartPage() {
             <div className="max-w-7xl mx-auto">
                 {/* Back Button */}
                 <div className="mb-8">
-                    <Link href="/analysis/nlp" className="text-gray-400 hover:text-white transition-colors">
-                        ← Back to Analysis
+                    <Link href="/generation/text" className="text-gray-400 hover:text-white transition-colors">
+                        ← Back to Generation
                     </Link>
                 </div>
 
