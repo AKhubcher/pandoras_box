@@ -12,12 +12,6 @@ const nlpModels = [
     description: "BERT is a bidirectional transformer pretrained on unlabeled text to predict masked tokens in a sentence and to predict whether one sentence follows another. The main idea is that by randomly masking some tokens, the model can train on text to the left and right, giving it a more thorough understanding. BERT is also very versatile because its learned language representations can be adapted for other NLP tasks by fine-tuning an additional layer or head",
     capabilities: ["Pre-Trained", "Understanding Text, Can't Generate Text", "Fine Tunable on NLP tasks", "Open-Sources", "Widely Adopted"],
     path: "/analysis/nlp/bert"
-  },
-  {
-    name: "T5",
-    description: "Text-to-Text Transfer Transformer for various NLP tasks",
-    capabilities: ["Encoder-Decoder Transformation", "Highly Scalable", "Open-Sourced", "Unifed Model for many NLP benchmarks", "Strong in Summarization", "Easily Customizable"],
-    path: "/analysis/nlp/t5"
   }
 ];
 
