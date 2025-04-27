@@ -44,11 +44,14 @@ export default function GPT4Page() {
                             <h2 className="text-2xl font-bold mb-4">Introduction</h2>
                             <div className="space-y-4 text-gray-300">
                                 <p>
-                                    DeepAI is a research company and platform focused on making artificial intelligence technology accessible to everyone. They offer a comprehensive suite of AI tools and APIs that developers, businesses, and researchers can integrate into their applications, covering a wide range of capabilities including text generation, image processing, content moderation, and various other AI functionalities.
+                                    DeepAI provides accessible AI tools via APIs and web interfaces, offering:
                                 </p>
-                                <p>
-                                    Beyond providing ready-to-use AI tools, DeepAI maintains a commitment to advancing AI research and education. They host an open-access scientific journal for AI research publications and offer educational resources to help people understand AI technologies. This combination of practical tools and knowledge-sharing positions DeepAI as both a service provider and a contributor to the broader AI ecosystem, with the aim of democratizing access to artificial intelligence capabilities.RetryClaude can make mistakes. Please double-check responses.
-                                </p>
+                                <ul className="list-disc pl-5 space-y-2">
+                                    <li>Text/image generation APIs</li>
+                                    <li>No-code web interface for quick testing</li>
+                                    <li>Open-access research and educational resources</li>
+                                    <li>Developer-friendly REST API structure</li>
+                                </ul>
                             </div>
                         </div>
 
@@ -56,39 +59,48 @@ export default function GPT4Page() {
                             <h2 className="text-2xl font-bold mb-4">Instructions</h2>
                             <div className="space-y-3">
                                 <div className="bg-purple-900/30 p-4 rounded-lg">
-                                    1. Choose your interaction method (API or interface)
+                                    <h3 className="font-bold">1. Choose Interaction Method</h3>
                                 </div>
-                                <div className="bg-gray-900/50 p-4 rounded-lg font-mono text-sm">
-                                    {`import OpenAI from 'openai';
+                                <div className="bg-gray-900/50 p-4 rounded-lg text-sm">
+                                    <ul className="space-y-2">
+                                        <li><strong>API:</strong> POST to <code>https://api.deepai.org/text-generator</code></li>
+                                        <li><strong>Headers:</strong> <code>'api-key': YOUR_KEY</code></li>
+                                        <li><strong>Body:</strong> JSON with <code>text</code> and parameters</li>
+                                        <li><strong>Web Interface:</strong> Sliders for temperature/length</li>
+                                    </ul>
+                                </div>
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+                                <div className="bg-purple-900/30 p-4 rounded-lg">
+                                    <h3 className="font-bold">2. Prompt Guidelines</h3>
+                                </div>
+                                <div className="bg-gray-900/50 p-4 rounded-lg text-sm">
+                                    <ul className="space-y-2">
+                                        <li>Specify format/length (e.g., "200-word blog post")</li>
+                                        <li>Include target audience (e.g., "for beginners")</li>
+                                        <li>Add constraints: "Avoid technical jargon"</li>
+                                    </ul>
+                                </div>
 
-async function generateText(prompt: string) {
-  const completion = await openai.chat.completions.create({
-    model: "gpt-4",
-    messages: [{ role: "user", content: prompt }],
-    temperature: 0.7,
-  });
+                                <div className="bg-purple-900/30 p-4 rounded-lg">
+                                    <h3 className="font-bold">3. Key Parameters</h3>
+                                </div>
+                                <div className="bg-gray-900/50 p-4 rounded-lg text-sm">
+                                    <ul className="space-y-2">
+                                        <li><strong>Temperature:</strong> 0.0 (strict) to 1.0 (creative)</li>
+                                        <li><strong>max_length:</strong> Control response size</li>
+                                        <li><strong>top_p:</strong> Filter unlikely words</li>
+                                    </ul>
+                                </div>
 
-  return completion.choices[0].message.content;
-}`}
-                                </div>
                                 <div className="bg-purple-900/30 p-4 rounded-lg">
-                                    2. Provide clear, well-structured prompts
+                                    <h3 className="font-bold">4-6. Refinement & Safety</h3>
                                 </div>
-                                <div className="bg-purple-900/30 p-4 rounded-lg">
-                                    3. Set appropriate temperature and parameters
-                                </div>
-                                <div className="bg-purple-900/30 p-4 rounded-lg">
-                                    4. Review and refine the generated output
-                                </div>
-                                <div className="bg-purple-900/30 p-4 rounded-lg">
-                                    5. Iterate based on results
-                                </div>
-                                <div className="bg-purple-900/30 p-4 rounded-lg">
-                                    6. Implement safety measures and content filtering
+                                <div className="bg-gray-900/50 p-4 rounded-lg text-sm">
+                                    <ul className="space-y-2">
+                                        <li>Review for accuracy/bias</li>
+                                        <li>Iterate with adjusted prompts</li>
+                                        <li>Use DeepAI's content filters + custom checks</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -97,20 +109,35 @@ async function generateText(prompt: string) {
                             <h2 className="text-2xl font-bold mb-4">Capabilities</h2>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div className="bg-purple-900/30 p-4 rounded-lg">
-                                    <h3 className="font-bold mb-2">Natural Language Understanding</h3>
-                                    <p className="text-gray-300">Advanced comprehension of context, nuance, and complex language patterns</p>
+                                    <h3 className="font-bold mb-2">Text Generation</h3>
+                                    <ul className="text-gray-300 space-y-1">
+                                        <li>• Blog posts/summaries</li>
+                                        <li>• Creative writing</li>
+                                        <li>• Technical documentation</li>
+                                    </ul>
                                 </div>
                                 <div className="bg-purple-900/30 p-4 rounded-lg">
-                                    <h3 className="font-bold mb-2">Code Generation</h3>
-                                    <p className="text-gray-300">Ability to write, review, and explain code across multiple programming languages</p>
+                                    <h3 className="font-bold mb-2">Image Processing</h3>
+                                    <ul className="text-gray-300 space-y-1">
+                                        <li>• Style transfer</li>
+                                        <li>• Colorization</li>
+                                        <li>• Object detection</li>
+                                    </ul>
                                 </div>
                                 <div className="bg-purple-900/30 p-4 rounded-lg">
-                                    <h3 className="font-bold mb-2">Creative Writing</h3>
-                                    <p className="text-gray-300">Generation of various creative content formats with consistent style and tone</p>
+                                    <h3 className="font-bold mb-2">Developer Tools</h3>
+                                    <ul className="text-gray-300 space-y-1">
+                                        <li>• Code explanation</li>
+                                        <li>• API integration</li>
+                                        <li>• Rapid prototyping</li>
+                                    </ul>
                                 </div>
                                 <div className="bg-purple-900/30 p-4 rounded-lg">
-                                    <h3 className="font-bold mb-2">Analysis & Reasoning</h3>
-                                    <p className="text-gray-300">Complex problem-solving and detailed analytical capabilities</p>
+                                    <h3 className="font-bold mb-2">Content Moderation</h3>
+                                    <ul className="text-gray-300 space-y-1">
+                                        <li>• NSFW filtering</li>
+                                        <li>• Toxicity detection</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -119,16 +146,23 @@ async function generateText(prompt: string) {
                             <h2 className="text-2xl font-bold mb-4">Examples</h2>
                             <div className="space-y-4">
                                 <div className="bg-gray-900/50 p-4 rounded-lg font-mono text-sm">
-                                    {`// Example: Creative writing prompt
-const response = await generateText(
-  "Write a short story about a robot learning to paint"
-);`}
+                                    {`// Text Generation API Call
+fetch('https://api.deepai.org/text-generator', {
+  method: 'POST',
+  headers: { 'api-key': 'YOUR_KEY' },
+  body: JSON.stringify({
+    text: "Explain quantum computing in 3 sentences",
+    temperature: 0.3
+  })
+});`}
                                 </div>
                                 <div className="bg-gray-900/50 p-4 rounded-lg font-mono text-sm">
-                                    {`// Example: Code generation
-const response = await generateText(
-  "Write a React component for a todo list"
-);`}
+                                    {`// Image Colorization Example
+fetch('https://api.deepai.org/colorizer', {
+  method: 'POST',
+  headers: { 'api-key': 'YOUR_KEY' },
+  body: JSON.stringify({ image: "URL_TO_BW_IMAGE" })
+});`}
                                 </div>
                             </div>
                         </div>
@@ -149,11 +183,11 @@ const response = await generateText(
                         <div className="bg-gray-800/50 rounded-xl p-6">
                             <h3 className="text-xl font-bold mb-4">Key Features</h3>
                             <ul className="space-y-2 text-gray-300">
-                                <li>• Advanced language understanding</li>
-                                <li>• Multi-modal capabilities</li>
-                                <li>• Improved reasoning</li>
-                                <li>• Enhanced creativity</li>
-                                <li>• Better context retention</li>
+                                <li>• <strong>20+ AI APIs</strong>: Text, image, video, etc.</li>
+                                <li>• <strong>Free Tier</strong>: Limited daily requests</li>
+                                <li>• <strong>Fast Integration</strong>: Simple REST endpoints</li>
+                                <li>• <strong>Real-Time Processing</strong>: Low latency responses</li>
+                                <li>• <strong>Prebuilt Models</strong>: No training required</li>
                             </ul>
                         </div>
                     </div>
@@ -161,4 +195,4 @@ const response = await generateText(
             </div>
         </div>
     );
-} 
+}
