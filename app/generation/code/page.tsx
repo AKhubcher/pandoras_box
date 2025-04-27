@@ -9,7 +9,7 @@ export default function NLPPage() {
                         ← Back to Home
                     </Link>
                 </div>
-                <h1 className="text-4xl font-bold mb-4">Audio Generation</h1>
+                <h1 className="text-4xl font-bold mb-4">Code Generation</h1>
                 <p className="text-xl text-gray-400 mb-8">
                     Automatically create code snippets, scripts, or full programs in various programming languages.
                 </p>

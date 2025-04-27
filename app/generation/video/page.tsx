@@ -10,7 +10,7 @@ export default function NLPPage() {
                     </Link>
                 </div>
 
-                <h1 className="text-4xl font-bold mb-4">Audio Generation</h1>
+                <h1 className="text-4xl font-bold mb-4">Video Generation</h1>
                 <p className="text-xl text-gray-400 mb-8">
                     Create and produce video content, combining visuals, motion, and audio.
                 </p>

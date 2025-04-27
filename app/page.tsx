@@ -50,21 +50,45 @@ export default function Home() {
           <h2 className="text-3xl font-bold mb-8 text-center">Featured AI Models</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Placeholder for AI models */}
-            <div className="bg-gray-800/50 rounded-xl p-6 hover:bg-gray-800/70 transition-colors">
-              <div className="h-48 bg-gray-700/50 rounded-lg mb-4 animate-pulse" />
-              <h3 className="text-xl font-bold mb-2">Model Name</h3>
-              <p className="text-gray-400">Model description and capabilities</p>
-            </div>
-            <div className="bg-gray-800/50 rounded-xl p-6 hover:bg-gray-800/70 transition-colors">
-              <div className="h-48 bg-gray-700/50 rounded-lg mb-4 animate-pulse" />
-              <h3 className="text-xl font-bold mb-2">Model Name</h3>
-              <p className="text-gray-400">Model description and capabilities</p>
-            </div>
-            <div className="bg-gray-800/50 rounded-xl p-6 hover:bg-gray-800/70 transition-colors">
-              <div className="h-48 bg-gray-700/50 rounded-lg mb-4 animate-pulse" />
-              <h3 className="text-xl font-bold mb-2">Model Name</h3>
-              <p className="text-gray-400">Model description and capabilities</p>
-            </div>
+            <Link href={"/analysis/nlp/gpt4"}>
+              <div className="bg-gray-800/50 rounded-xl p-6 hover:bg-gray-800/70 transition-colors">
+                <Image
+                  width={192}
+                  height={350}
+                  src="/oalogo.png"
+                  alt="OpenAI Logo"
+                  className="object-cover"
+                />
+                <h3 className="text-xl font-bold mb-2">GPT-4</h3>
+                <p className="text-gray-400">Open AI's most advanced input output multi tool AI model</p>
+              </div>
+            </Link>
+            <Link href={"/generation/text/bart"}>
+              <div className="bg-gray-800/50 rounded-xl p-6 hover:bg-gray-800/70 transition-colors">
+                <Image
+                  width={192}
+                  height={350}
+                  src="/hflogo.png"
+                  alt="Hugging Face Logo"
+                  className="object-cover"
+                />
+                <h3 className="text-xl font-bold mb-2">BART</h3>
+                <p className="text-gray-400">Text generation tool for detailed text analysis, creative writing, and coding</p>
+              </div>
+            </Link>
+            <Link href={"/generation/image/deepai"}>
+              <div className="bg-gray-800/50 rounded-xl p-6 hover:bg-gray-800/70 transition-colors">
+                <Image
+                  width={192}
+                  height={350}
+                  src="/da.png"
+                  alt="DeepAI Logo"
+                  className="object-cover"
+                />
+                <h3 className="text-xl font-bold mb-2">DeepAI</h3>
+                <p className="text-gray-400">Multi purpose generative AI tool for creative functions</p>
+              </div>
+            </Link>
           </div>
         </div>
       </section>
