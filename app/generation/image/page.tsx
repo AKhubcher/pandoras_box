@@ -13,12 +13,6 @@ const imageModels = [
         capabilities: ["Text-To-Image Generation", "API Available for Developers", "Understands Complex Text Promts", "Can edit and extend existing images", "Fine control over style and structure"
         ],
         path: "/generation/image/dalle"
-    },
-    {
-        name: "T5",
-        description: "A model by Google that treats all NLP tasks as converting input text to output text, allowing unified training across diverse language tasks.Text-to-Text Transfer Transformer for various NLP tasks",
-        capabilities: ["Treats every NLP task as a text-to-text task", "Pre-trained on the Colossal Clean Crawled Corpus (C4)", "Strong in summarization, translation, classification, Q&A", "Encoder-decoder transformer architecture", "Open-sourced", "Easily customizable for new tasks"],
-        path: "/generation/image/t5"
     }
 ];
 

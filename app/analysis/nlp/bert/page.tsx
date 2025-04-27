@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function GPT4Page() {
+export default function BertPage() {
     return (
         <div className="min-h-screen py-16 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
@@ -18,19 +18,19 @@ export default function GPT4Page() {
                         <div className="w-16 h-16 bg-purple-600/50 rounded-full" />
                     </div>
                     <div className="flex-1">
-                        <h1 className="text-4xl font-bold mb-2">GPT-4</h1>
+                        <h1 className="text-4xl font-bold mb-2">BERT</h1>
                         <div className="flex flex-wrap gap-4">
                             <div className="bg-purple-900/30 px-4 py-2 rounded-lg">
-                                <span className="text-purple-400">Model Name:</span> GPT-4
+                                <span className="text-purple-400">Model Name:</span> BERT
                             </div>
                             <div className="bg-purple-900/30 px-4 py-2 rounded-lg">
-                                <span className="text-purple-400">Docs:</span> <a href="https://platform.openai.com/docs">OpenAI</a>
+                                <span className="text-purple-400">Docs:</span> <a href="https://huggingface.co/docs/transformers/en/model_doc/bert">Bert</a>
                             </div>
                             <div className="bg-purple-900/30 px-4 py-2 rounded-lg">
-                                <span className="text-purple-400">Keywords:</span> Generative, Multimodal, Large-language-model
+                                <span className="text-purple-400">Keywords:</span> Bidirectional, Language-understanding, Transformer-based
                             </div>
                             <div className="bg-purple-900/30 px-4 py-2 rounded-lg">
-                                <span className="text-purple-400">Installation:</span> <a href="https://platform.openai.com/docs/quickstart?api-mode=responses">Docs</a>
+                                <span className="text-purple-400">Installation:</span> <a href="https://huggingface.co/docs/transformers/installation">Docs</a>
                             </div>
                         </div>
                     </div>
