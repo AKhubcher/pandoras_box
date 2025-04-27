@@ -1,9 +1,24 @@
 import { NextResponse } from 'next/server';
 
+// In-memory storage for search history (replace with database in production)
+let searchHistory: Array<{ query: string; timestamp: number; tab: string }> = [];
 
-// In-memory storage for demo purposes
-// In a real app, this would be a database
-let searchHistory: { query: string; timestamp: number; tab: string }[] = [];
+export async function GET() {
+  try {
+    // Return recent searches sorted by timestamp (newest first)
+    const recentSearches = searchHistory
+      .sort((a, b) => b.timestamp - a.timestamp)
+      .slice(0, 10); // Limit to 10 most recent searches
+    
+    return NextResponse.json(recentSearches);
+  } catch (error) {
+    console.error('Error fetching search history:', error);
+    return NextResponse.json(
+      { error: 'Failed to fetch search history' },
+      { status: 500 }
+    );
+  }
+}
 
 export async function POST(request: Request) {
   try {
@@ -12,39 +27,23 @@ export async function POST(request: Request) {
 
     if (!query || !tab) {
       return NextResponse.json(
-        { error: 'Query and tab are required' },
+        { error: 'Missing required fields' },
         { status: 400 }
       );
     }
 
-    const searchEntry = {
+    // Add new search to history
+    searchHistory.push({
       query,
       tab,
       timestamp: Date.now(),
-    };
+    });
 
-    searchHistory.push(searchEntry);
-
-    return NextResponse.json(searchEntry);
+    return NextResponse.json({ success: true });
   } catch (error) {
+    console.error('Error saving search:', error);
     return NextResponse.json(
-      { error: 'Failed to process search' },
-      { status: 500 }
-    );
-  }
-}
-
-export async function GET() {
-  try {
-    // Return the last 10 searches
-    const recentSearches = searchHistory
-      .sort((a, b) => b.timestamp - a.timestamp)
-      .slice(0, 10);
-
-    return NextResponse.json(recentSearches);
-  } catch (error) {
-    return NextResponse.json(
-      { error: 'Failed to fetch search history' },
+      { error: 'Failed to save search' },
       { status: 500 }
     );
   }
