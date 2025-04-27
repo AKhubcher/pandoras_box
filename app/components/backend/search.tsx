@@ -40,8 +40,8 @@ const modelCatalog: SearchResult[] = [
   },
   {
     name: "GPT-4",
-    type: "Text Generation",
-    category: "generation/text",
+    type: "NLP",
+    category: "analysis/nlp",
     description: "OpenAI's most advanced language model"
   },
   {
@@ -78,10 +78,10 @@ const modelCatalog: SearchResult[] = [
 
 export function searchModels(query: string): SearchResult[] {
   if (!query.trim()) return [];
-  
+
   const lowerQuery = query.toLowerCase();
   const queryTerms = lowerQuery.split(/\s+/); // Split query into terms
-  
+
   return modelCatalog.filter(item => {
     const searchableText = [
       item.name.toLowerCase(),
@@ -89,7 +89,7 @@ export function searchModels(query: string): SearchResult[] {
       item.description.toLowerCase(),
       item.category.toLowerCase().split('/').join(' ') // Add category as searchable text
     ].join(' ');
-    
+
     // Check if all query terms are found in the searchable text
     return queryTerms.every(term => searchableText.includes(term));
   });
@@ -98,4 +98,3 @@ export function searchModels(query: string): SearchResult[] {
 export function getModelDetails(name: string): SearchResult | undefined {
   return modelCatalog.find(item => item.name.toLowerCase() === name.toLowerCase());
 }
-  

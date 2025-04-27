@@ -161,7 +161,8 @@ export default function SearchOverlay({ onClose }: SearchOverlayProps) {
                   <div className="h-8 w-8 border-2 border-purple-500 border-t-transparent rounded-full animate-spin" />
                 </div>
               ) : searchQuery ? (
-                searchResults.length > 0 ? (
+                //consider setting a limit to prevent overflow of model options
+                searchResults.length > 0 && searchResults.length < 6 ? (
                   <div className="space-y-4">
                     {searchResults.map((result, index) => (
                       <div key={index} className="p-4 rounded-lg bg-gray-700/50 hover:bg-gray-700/70 transition-colors">
@@ -169,7 +170,7 @@ export default function SearchOverlay({ onClose }: SearchOverlayProps) {
                         <p className="text-sm text-gray-400">{result.type}</p>
                         <p className="text-sm text-gray-500 mt-2">{result.description}</p>
                         <a
-                          href={`/${result.category}/${result.name.toLowerCase()}`}
+                          href={`/${result.category}/${result.name.toLowerCase().replace("-", "")}`}
                           className="text-sm text-purple-400 hover:text-purple-300 mt-2 inline-block"
                         >
                           View Details →
