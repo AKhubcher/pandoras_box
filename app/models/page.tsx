@@ -6,7 +6,7 @@ const allModels = [
     name: "BART",
     description: "Bidirectional and Auto-Regressive Transformer for sequence-to-sequence tasks",
     category: "Natural Language Processing",
-    path: "/analysis/nlp/bart",
+    path: "/generation/text/bart",
     bgColor: "from-blue-900/50 to-indigo-900/50"
   },
   {
@@ -27,7 +27,7 @@ const allModels = [
     name: "DeepAI",
     description: "Multi-purpose AI model for various creative and analytical tasks",
     category: "Multi-Modal",
-    path: "/generation/deepai",
+    path: "/generation/image/deepai",
     bgColor: "from-purple-900/50 to-pink-900/50"
   },
   {
@@ -41,7 +41,7 @@ const allModels = [
     name: "GPT-4",
     description: "State-of-the-art language model for text generation and understanding",
     category: "Text Generation",
-    path: "/generation/text/gpt4",
+    path: "/analysis/nlp/gpt4",
     bgColor: "from-purple-900/50 to-pink-900/50"
   },
   {
@@ -96,7 +96,7 @@ export default function ModelsPage() {
           <p className="text-gray-300 mb-6">
             We're constantly adding new models to our library. Check back often for updates!
           </p>
-          <Link 
+          <Link
             href="/learn"
             className="inline-block px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg hover:from-purple-500 hover:to-pink-500 transition-colors"
           >

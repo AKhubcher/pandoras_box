@@ -29,7 +29,7 @@ const analysisCategories = [
 
 ];
 
-export default function AnalysisPage() {
+export default function GenerationPage() {
   return (
     <div className="min-h-screen py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -39,9 +39,9 @@ export default function AnalysisPage() {
           </Link>
         </div>
 
-        <h1 className="text-4xl font-bold mb-4">Analytical AI</h1>
+        <h1 className="text-4xl font-bold mb-4">Generative AI</h1>
         <p className="text-xl text-gray-400 mb-8">
-          Explore our collection of AI models that analyze and interpret various types of data.
+          Explore our collection of AI models that generate various types of media.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
