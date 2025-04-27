@@ -19,20 +19,40 @@ export default function Header() {
           </h1>
         </Link>
         <nav className="flex items-center space-x-6">
-          <Link href="/how-it-works" className="text-gray-300 hover:text-purple-400 transition-colors">
+          <Link 
+            href="/how-it-works" 
+            className="text-gray-300 hover:text-purple-400 transition-colors relative group"
+          >
             How It Works
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-400 transition-all duration-300 group-hover:w-full" />
           </Link>
-          <Link href="/models" className="text-gray-300 hover:text-purple-400 transition-colors">
+          <Link 
+            href="/models" 
+            className="text-gray-300 hover:text-purple-400 transition-colors relative group"
+          >
             All Models
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-400 transition-all duration-300 group-hover:w-full" />
           </Link>
-          <Link href="/learn" className="text-gray-300 hover:text-purple-400 transition-colors">
+          <Link 
+            href="/learn" 
+            className="text-gray-300 hover:text-purple-400 transition-colors relative group"
+          >
             Learn
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-400 transition-all duration-300 group-hover:w-full" />
           </Link>
-          <Link href="/about" className="text-gray-300 hover:text-purple-400 transition-colors">
+          <Link 
+            href="/about" 
+            className="text-gray-300 hover:text-purple-400 transition-colors relative group"
+          >
             About
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-400 transition-all duration-300 group-hover:w-full" />
           </Link>
-          <Link href="/profile" className="text-gray-300 hover:text-purple-400 transition-colors">
+          <Link 
+            href="/profile" 
+            className="text-gray-300 hover:text-purple-400 transition-colors relative group"
+          >
             Profile
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-400 transition-all duration-300 group-hover:w-full" />
           </Link>
         </nav>
       </div>
