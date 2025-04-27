@@ -2,22 +2,23 @@ import Link from "next/link";
 
 const imageModels = [
     {
-        name: "Deep AI",
-        description: "Generates all kinds of content, from text, images, and videos, to music- all in one place.",
-        capabilities: ["Text generation", "Easy-to-use", "Video Generation", "All in One"],
+        name: "DeepAI",
+        description: "DeepAI uses artificial intelligence to generate all kinds of content, from text, images, and videos, to music—all in one place. Think of it as an entry-level tool for anyone curious about the potential of AI, without needing to understand complex code or algorithms.",
+        capabilities: ["Platform offers API's for AI Tasks", "Makes AI accessible for everyone", "Easy to integrate into applications", "Fast Deployment and Prototyping", "Simple Rest API Structure", "Wide Range of Model Endpoints"],
         path: "/generation/image/deepai"
     },
     {
-        name: "DALLE-E",
-        description: "Text-to-image models developed by OpenAI using deep learning methodologies",
-        capabilities: ["Text-to-Image Models", "Digital Image Generations", "Audio and Speech Development", "Text Generation"],
-        path: "https://platform.openai.com/docs/quickstart?api-mode=responses"
+        name: "DALL-E",
+        description: "An AI model by OpenAI that generates images from text prompts, combining visual creativity with natural language understanding.",
+        capabilities: ["Text-To-Image Generation", "API Available for Developers", "Understands Complex Text Promts", "Can edit and extend existing images", "Fine control over style and structure"
+        ],
+        path: "/generation/image/dalle"
     },
     {
-        name: "",
-        description: "Text-to-Text Transfer Transformer for various NLP tasks",
-        capabilities: ["Text summarization", "Translation", "Question answering", "Text classification"],
-        path: "/models/t5"
+        name: "T5",
+        description: "A model by Google that treats all NLP tasks as converting input text to output text, allowing unified training across diverse language tasks.Text-to-Text Transfer Transformer for various NLP tasks",
+        capabilities: ["Treats every NLP task as a text-to-text task", "Pre-trained on the Colossal Clean Crawled Corpus (C4)", "Strong in summarization, translation, classification, Q&A", "Encoder-decoder transformer architecture", "Open-sourced", "Easily customizable for new tasks"],
+        path: "/generation/image/t5"
     }
 ];
 
@@ -31,7 +32,7 @@ export default function NLPPage() {
                     </Link>
                 </div>
 
-                <h1 className="text-4xl font-bold mb-4">Natural Language Processing</h1>
+                <h1 className="text-4xl font-bold mb-4">Image Generation</h1>
                 <p className="text-xl text-gray-400 mb-8">
                     Explore our collection of NLP models that help machines understand, interpret, and generate human language.
                 </p>
