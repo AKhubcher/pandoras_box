@@ -5,7 +5,7 @@ const imageModels = [
         name: "Deep AI",
         description: "Generates all kinds of content, from text, images, and videos, to music- all in one place.",
         capabilities: ["Text generation", "Easy-to-use", "Video Generation", "All in One"],
-        path: "/generation/image/deepai"
+        path: "/geni"
     },
     {
         name: "DALLE-E",
