@@ -57,7 +57,7 @@ const allModels = [
     category: "Text Generation",
     path: "/generation/text/llama",
     bgColor: "from-purple-900/50 to-pink-900/50",
-    logo: "/meta-symbol-1536x864.png"
+    logo: "/Meta-Symbol-1536x864.png"
   },
   {
     name: "Whisper",
