@@ -18,7 +18,8 @@ export default function BertPage() {
                         <div className="w-16 h-16 bg-purple-600/50 rounded-full" />
                     </div>
                     <div className="flex-1">
-                        <h1 className="text-4xl font-bold mb-2">BERT</h1>
+                        <h1 className="inline-block text-4xl font-bold mb-2">BERT</h1>
+                        <p className="inline-block m-4 text-green-400">free</p>
                         <div className="flex flex-wrap gap-4">
                             <div className="bg-purple-900/30 px-4 py-2 rounded-lg">
                                 <span className="text-purple-400">Model Name:</span> BERT

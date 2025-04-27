@@ -3,12 +3,14 @@ import Link from "next/link";
 const imageModels = [
     {
         name: "DeepAI",
+        cost: "freemium",
         description: "DeepAI uses artificial intelligence to generate all kinds of content, from text, images, and videos, to music—all in one place. Think of it as an entry-level tool for anyone curious about the potential of AI, without needing to understand complex code or algorithms.",
         capabilities: ["Platform offers API's for AI Tasks", "Makes AI accessible for everyone", "Easy to integrate into applications", "Fast Deployment and Prototyping", "Simple Rest API Structure", "Wide Range of Model Endpoints"],
         path: "/generation/image/deepai"
     },
     {
         name: "DALL-E",
+        cost: "paid",
         description: "An AI model by OpenAI that generates images from text prompts, combining visual creativity with natural language understanding.",
         capabilities: ["Text-To-Image Generation", "API Available for Developers", "Understands Complex Text Promts", "Can edit and extend existing images", "Fine control over style and structure"
         ],
@@ -34,7 +36,8 @@ export default function NLPPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {imageModels.map((model) => (
                         <div key={model.name} className="bg-gray-800/50 rounded-xl p-6 hover:bg-gray-800/70 transition-colors">
-                            <h3 className="text-2xl font-bold mb-4">{model.name}</h3>
+                            <h3 className="inline-block text-2xl font-bold mb-4">{model.name}</h3>
+                            <p className="inline-block m-4 text-purple-400">{model.cost}</p>
                             <p className="text-gray-400 mb-4">{model.description}</p>
                             <div className="mb-4">
                                 <h4 className="text-lg font-semibold mb-2">Capabilities:</h4>

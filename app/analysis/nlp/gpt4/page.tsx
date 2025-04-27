@@ -18,7 +18,8 @@ export default function GPT4Page() {
                         <div className="w-16 h-16 bg-purple-600/50 rounded-full" />
                     </div>
                     <div className="flex-1">
-                        <h1 className="text-4xl font-bold mb-2">GPT-4</h1>
+                        <h1 className="inline-block text-4xl font-bold mb-2">GPT-4</h1>
+                        <p className="inline-block m-4 text-red-400">paid</p>
                         <div className="flex flex-wrap gap-4">
                             <div className="bg-purple-900/30 px-4 py-2 rounded-lg">
                                 <span className="text-purple-400">Model Name:</span> GPT-4
@@ -31,6 +32,9 @@ export default function GPT4Page() {
                             </div>
                             <div className="bg-purple-900/30 px-4 py-2 rounded-lg">
                                 <span className="text-purple-400">Installation:</span> <a href="https://platform.openai.com/docs/quickstart?api-mode=responses" style={{ textDecoration: "underline", color: '#3D90D7' }}>Docs</a>
+                            </div>
+                            <div className="text-green-400 bg-purple-900/30 px-4 py-2 rounded-lg">
+                                38 keys available
                             </div>
                         </div>
                     </div>
