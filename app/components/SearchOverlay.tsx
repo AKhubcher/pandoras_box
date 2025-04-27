@@ -41,7 +41,7 @@ export default function SearchOverlay({ onClose }: SearchOverlayProps) {
 
   const handleSearch = async () => {
     if (!searchQuery.trim()) return;
-    
+
     setIsLoading(true);
     try {
       // Perform local search
@@ -79,12 +79,11 @@ export default function SearchOverlay({ onClose }: SearchOverlayProps) {
 
   return (
     <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center">
-      <div 
-        className={`bg-gray-900/95 rounded-2xl shadow-2xl transition-all duration-300 ${
-          viewMode === 'sidebar' 
-            ? 'w-[400px] h-[80vh] fixed right-8 top-1/2 -translate-y-1/2' 
-            : 'w-[90vw] h-[80vh] max-w-6xl'
-        }`}
+      <div
+        className={`bg-gray-900/95 rounded-2xl shadow-2xl transition-all duration-300 ${viewMode === 'sidebar'
+          ? 'w-[400px] h-[80vh] fixed right-8 top-1/2 -translate-y-1/2'
+          : 'w-[90vw] h-[80vh] max-w-6xl'
+          }`}
       >
         <div className="absolute top-4 right-4 flex gap-2">
           {viewMode === 'sidebar' && (
@@ -127,7 +126,7 @@ export default function SearchOverlay({ onClose }: SearchOverlayProps) {
             <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
               AI Model Search
             </h2>
-            
+
             {/* Search Input */}
             <div className="relative mb-8">
               <input
@@ -140,7 +139,7 @@ export default function SearchOverlay({ onClose }: SearchOverlayProps) {
                 placeholder="Search for AI models..."
                 className="w-full p-4 rounded-xl bg-gray-800/50 border border-gray-700 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 outline-none transition-all"
               />
-              <button 
+              <button
                 onClick={handleSearch}
                 className="absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-full hover:bg-gray-700/50 transition-colors"
                 disabled={isLoading}
@@ -156,7 +155,7 @@ export default function SearchOverlay({ onClose }: SearchOverlayProps) {
             </div>
 
             {/* Results Area */}
-            <div className="bg-gray-800/50 rounded-xl p-6 h-[calc(100vh-300px)] overflow-y-auto">
+            <div className="bg-gray-800/50 rounded-xl p-6">
               {isLoading ? (
                 <div className="flex justify-center items-center h-32">
                   <div className="h-8 w-8 border-2 border-purple-500 border-t-transparent rounded-full animate-spin" />
@@ -169,7 +168,7 @@ export default function SearchOverlay({ onClose }: SearchOverlayProps) {
                         <h3 className="font-bold text-purple-400">{result.name}</h3>
                         <p className="text-sm text-gray-400">{result.type}</p>
                         <p className="text-sm text-gray-500 mt-2">{result.description}</p>
-                        <a 
+                        <a
                           href={`/${result.category}/${result.name.toLowerCase()}`}
                           className="text-sm text-purple-400 hover:text-purple-300 mt-2 inline-block"
                         >
@@ -179,7 +178,7 @@ export default function SearchOverlay({ onClose }: SearchOverlayProps) {
                     ))}
                   </div>
                 ) : (
-                  <p className="text-gray-400 text-center">No results found for "{searchQuery}"</p>
+                  <p className="text-gray-400 text-center">search for "{searchQuery}" ↵</p>
                 )
               ) : (
                 <div className="space-y-4">
