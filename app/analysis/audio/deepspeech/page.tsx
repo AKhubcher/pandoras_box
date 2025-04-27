@@ -24,13 +24,13 @@ export default function GPT4Page() {
                                 <span className="text-purple-400">Model Name:</span> Deep Speech
                             </div>
                             <div className="bg-purple-900/30 px-4 py-2 rounded-lg">
-                                <span className="text-purple-400">Docs:</span> <a href="https://deepspeech.readthedocs.io/en/r0.9/">Deep Speech</a>
+                                <span className="text-purple-400">Docs:</span> <a href="https://deepspeech.readthedocs.io/en/r0.9/" style={{ textDecoration: "underline", color: '#3D90D7' }}>Deep Speech</a>
                             </div>
                             <div className="bg-purple-900/30 px-4 py-2 rounded-lg">
                                 <span className="text-purple-400">Keywords:</span> Speech-to-text, Open-source, Mozilla-developed
                             </div>
                             <div className="bg-purple-900/30 px-4 py-2 rounded-lg">
-                                <span className="text-purple-400">Installation:</span> <a href="https://deepspeech.readthedocs.io/en/r0.9/">Docs</a>
+                                <span className="text-purple-400">Installation:</span> <a href="https://deepspeech.readthedocs.io/en/r0.9/" style={{ textDecoration: "underline", color: '#3D90D7' }}>Docs</a>
                             </div>
                         </div>
                     </div>

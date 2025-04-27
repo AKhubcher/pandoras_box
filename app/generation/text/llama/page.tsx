@@ -24,13 +24,13 @@ export default function GPT4Page() {
                                 <span className="text-purple-400">Model Name:</span> Ilama
                             </div>
                             <div className="bg-purple-900/30 px-4 py-2 rounded-lg">
-                                <span className="text-purple-400">Docs:</span> <a href="https://www.llama.com/docs/model-cards-and-prompt-formats/llama4_omni/">Ilama</a>
+                                <span className="text-purple-400">Docs:</span> <a href="https://www.llama.com/docs/model-cards-and-prompt-formats/llama4_omni/" style={{ textDecoration: "underline", color: '#3D90D7' }}>Ilama</a>
                             </div>
                             <div className="bg-purple-900/30 px-4 py-2 rounded-lg">
                                 <span className="text-purple-400">Keywords:</span> Meta-developed, Open-weights, Foundation-model
                             </div>
                             <div className="bg-purple-900/30 px-4 py-2 rounded-lg">
-                                <span className="text-purple-400">Installation:</span> <a href="https://huggingface.co/docs/transformers/en/model_doc/bart">Docs</a>
+                                <span className="text-purple-400">Installation:</span> <a href="https://huggingface.co/docs/transformers/en/model_doc/bart" style={{ textDecoration: "underline", color: '#3D90D7' }}>Docs</a>
                             </div>
                         </div>
                     </div>

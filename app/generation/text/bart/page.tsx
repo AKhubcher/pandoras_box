@@ -24,13 +24,13 @@ export default function GPT4Page() {
                                 <span className="text-purple-400">Model Name:</span> Bart
                             </div>
                             <div className="bg-purple-900/30 px-4 py-2 rounded-lg">
-                                <span className="text-purple-400">Docs:</span> <a href="https://huggingface.co/docs/transformers/en/model_doc/bart">Bart</a>
+                                <span className="text-purple-400">Docs:</span> <a href="https://huggingface.co/docs/transformers/en/model_doc/bart" style={{ textDecoration: "underline", color: '#3D90D7' }}>Bart</a>
                             </div>
                             <div className="bg-purple-900/30 px-4 py-2 rounded-lg">
                                 <span className="text-purple-400">Keywords:</span> Denoising, Sequence-to-sequence, Text-reconstruction
                             </div>
                             <div className="bg-purple-900/30 px-4 py-2 rounded-lg">
-                                <span className="text-purple-400">Installation:</span> <a href="https://huggingface.co/docs/transformers/installation">Docs</a>
+                                <span className="text-purple-400">Installation:</span> <a href="https://huggingface.co/docs/transformers/installation" style={{ textDecoration: "underline", color: '#3D90D7' }}>Docs</a>
                             </div>
                         </div>
                     </div>
