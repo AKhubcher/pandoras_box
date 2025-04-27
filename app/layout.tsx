@@ -26,17 +26,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} `}>
-        <nav >
-          <div >
-            <div >
-              <div >
-                <Link href="/">
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-gradient-to-b from-gray-900 to-black text-white`}>
+        <nav className="fixed top-0 w-full bg-black/50 backdrop-blur-md z-50 border-b border-gray-800">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex items-center justify-between h-16">
+              <div className="flex items-center">
+                <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
                   Pandora's Box
                 </Link>
               </div>
               <div className="flex space-x-4">
-                <Link href="/how-it-works">
+                <Link href="/how-it-works" className="hover:text-purple-400 transition-colors">
                   How It Works
                 </Link>
                 <Link href="/about" className="hover:text-purple-400 transition-colors">
@@ -46,11 +46,11 @@ export default function RootLayout({
             </div>
           </div>
         </nav>
-
+        
         <main className="pt-20">
           {children}
         </main>
-
+        
         <Analytics />
       </body>
     </html>
