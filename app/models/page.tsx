@@ -9,7 +9,7 @@ const allModels = [
     category: "Natural Language Processing",
     path: "/generation/text/bart",
     bgColor: "from-blue-900/50 to-indigo-900/50",
-    logo: "/Google-Bard-logo.jpg"
+    logo: "/hflogo.png"
   },
   {
     name: "BERT",
